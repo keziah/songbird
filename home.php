@@ -19,5 +19,7 @@ Songbird - Home
 <a href="myProfile.php"> My Profile </a><p>
 My Projects<br>
 Load project list here.
+<br><a href="project.php">Example Project</a>
+
 </body>
 </html>
