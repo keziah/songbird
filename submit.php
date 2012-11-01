@@ -14,6 +14,19 @@
 	<script src="resources/jquery-1.8.2.min.js"></script>
 	<script src="resources/jquery.mobile-1.2.0.js"></script>
 	<title>Songbird - Contribute</title>
+	
+	
+	<form class="fileupload" action="server/php/" method="POST" enctype="multipart/form-data"
+    data-upload-template-id="template-upload-1"
+    data-download-template-id="template-download-1">
+    <!-- ... -->
+</form>
+<form class="fileupload" action="server/php/" method="POST" enctype="multipart/form-data"
+    data-upload-template-id="template-upload-2"
+    data-download-template-id="template-download-2">
+    <!-- ... -->
+</form>
+	
 </head>
 
 </head>
