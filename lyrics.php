@@ -15,6 +15,7 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
+	        <script src="js/script.js"></script>
 
 </head>  
 <body> 
@@ -44,9 +45,9 @@
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
 		<ul>
-				<li><a href="project1.php" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
+				<li><a href="project1.php" id="info" data-icon="custom">Info</a></li>
 				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
-				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="lyrics.php" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>
 				<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>
 		</ul>
 		</div>

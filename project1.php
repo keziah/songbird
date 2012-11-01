@@ -15,6 +15,8 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
+	        <script src="js/script.js"></script>
+
 	
 <body>
 <div data-role="page" id="one">
@@ -27,10 +29,10 @@
 		<h2>Welcome <span id="username"></span></h2>
 		
 		<p>The neat thing about this example is that you can swipe right and left to navigate between pages, and you can also see in the code that the entire three page sequence within here is bundled into one page.</p>	
+		
 
 		<h3>Show internal pages:</h3>
-		<p><a href="#two" data-role="button">Show page "two"</a></p>	
-		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+		
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
@@ -38,8 +40,8 @@
 			<ul>
 				<li><a href="project1.php" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
 				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
-				<li><a href="filter.php" id="lyrics" data-icon="custom">Lyrics</a></li>
-				<li><a href="#" id="submit" data-icon="custom">Submit</a></li>
+				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>
 			</ul>
 		</div>
 	</div>
@@ -49,6 +51,9 @@
 
 
 <!-- Start of second page: #two -->
+
+
+/*
 <div data-role="page" id="two" data-add-back-btn="true">
 
 	<div data-role="header">
@@ -102,7 +107,7 @@
 		</div>lyrics
 	</div>music
 </div>
-</div><!-- /page popup -->
+</div><!-- /page popup -->*/
 
 <script type="text/javascript">
 // This handles all the swiping between each page. You really
