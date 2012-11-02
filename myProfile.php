@@ -1,28 +1,78 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
+	<title>Songbird</title> 
+	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
-	<link rel="stylesheet" href="resources/jquery.mobile-1.2.0.css" />
-	<link rel="stylesheet" href="resources/style.css" />
+	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+
+	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="appicon.png" />
 	<link rel="apple-touch-startup-image" href="startup.png">
 	
-	<script src="resources/jquery-1.8.2.min.js"></script>
-	<script src="resources/jquery.mobile-1.2.0.js"></script>
-</head>
+	<script src="jquery-1.8.2.min.js"></script>
+	<script src="jquery.mobile-1.2.0.js"></script>
+	
+	<div data-role="header">
+		<h1>User Profile</h1>
+	</div><!-- /header -->
 
 
-<?php
-$user = isset($_SESSION['user'])? $_SESSION['user'] : "Songbird";
-echo ("<title>".$user."'s Profile"."</title>");
-echo ('<a href="">Edit Account Details</a><p>Personal blurb here. Edit blurb should be implemented in-page with Ajax if possible.');
-echo('<p>Projects:');
-echo('<br>Public projects would show here. Private projects would also show if the user has permission');
-echo('<br><a href="project.php">Example Project</a>');
 
-?>
+
+<div id="content" class="clearfix">
+
+<section id="center">
+
+<h1>Johnny Appleseed</h1>
+
+        <section id="left">
+
+
+                <div class="pic">
+                    <a href="#"><img src="images/PartyCat.jpg" width="150" height="150" /></a>
+
+
+                </div>
+                <p> User info </p>
+
+                 
+
+                <div class="data">
+
+                    
+
+                    <h3>San Francisco, CA</h3>
+
+                 <h4><a href="http://spyrestudios.com/">http://spyrestudios.com/</a></h4>
+
+                    <div class="socialMediaLinks">
+
+                        <a href="http://twitter.com/jakerocheleau" rel="me" target="_blank"><img src="img/twitter.png" alt="@jakerocheleau" /></a>
+
+                        <a href="http://gowalla.com/users/JakeRocheleau" rel="me" target="_blank"><img src="img/gowalla.png" /></a>
+
+                    </div>
+
+                    <div class="sep"></div>
+
+                    <ul class="numbers clearfix">
+
+                        <li>Music Library<strong>185</strong></li>
+
+                       
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+	
+	
+	
+</head> 
 </html>
