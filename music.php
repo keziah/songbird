@@ -40,7 +40,7 @@
 		
 	<div id="info">
 
-		<embed src="uploads/Starlight.mp3" autostart="true" loop="false">
+		<embed src="uploads/Starlight.mp3" autostart="false" loop="false">
 
 	</div>	
 	</div><!-- /content -->

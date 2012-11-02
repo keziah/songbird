@@ -17,8 +17,6 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
 
-	
-
 </head>  
 <body> 
 
@@ -43,7 +41,14 @@
 	</div>	
 	</div><!-- /content -->
 	
-	
+<div id="form">
+	<form action="submission.php" method="post">
+	<p><label for="message">Project Name</label>
+		<input type="text" name="projectname" maxlength="140"></p>
+	<p><label for="password">Song File Name</label>
+		<input type="text" name="songname" maxlength="140"></p>
+	<input class="submit" type="submit" value="Send">
+</form></div>	
 	
 	
 
@@ -90,6 +95,27 @@
             </div>
         </div>
         
+<?php
+	include("config.php");
+	$query2 = sprintf("SELECT * FROM projects");
+	$result2 = mysql_query($query2);
+	$count = 0;
+	while ($row = mysql_fetch_assoc($result2)) {
+		$count++;
+		echo "<tr><td>".$count."</td>";
+		echo "<td>".$row["songname"]."</td>";
+		echo "<td>".$row["projectname"]."</td></tr>";
+	}
+	
+?>
+	   
+   
+   
+   
+   
+   
+   
+   
         
 <div class="container">
             

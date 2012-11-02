@@ -4744,7 +4744,7 @@ $( document ).delegate( $.mobile.dialog.prototype.options.initSelector, "pagecre
 (function( $, undefined ) {
 
 $.mobile.page.prototype.options.backBtnText  = "Back";
-$.mobile.page.prototype.options.addBackBtn   = false;
+$.mobile.page.prototype.options.addBackBtn   = true;
 $.mobile.page.prototype.options.backBtnTheme = null;
 $.mobile.page.prototype.options.headerTheme  = "a";
 $.mobile.page.prototype.options.footerTheme  = "a";
