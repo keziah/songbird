@@ -62,7 +62,7 @@ Create Account</a>
 
 
 <!--Begin second page-->
-<div id="reset" data-role="dialog" class="ui-dialog ui-page ui-body-a" data-url="reset" role="dialog">
+<div id="reset" data-role="dialog" class="ui-dialog ui-page ui-body-c" data-url="reset" role="dialog">
 <div data-role="header">
 <h1>Reset Password</h1>
 </div><!-- /header-->
@@ -81,7 +81,7 @@ Create Account</a>
 </div> <!--/second page-->
 
 <!--Begin third page-->
-<div id="signup" data-role="dialog" class="ui-dialog ui-page ui-body-a" data-url="signup" role="dialog">
+<div id="signup" data-role="dialog" class="ui-dialog ui-page ui-body-c" data-url="signup" role="dialog">
 <div data-role="header">
 <h1>Create Account</h1>
 </div><!-- /header-->

@@ -39,13 +39,13 @@ if($newPass != $confirmPass){
 	//want to make it pause somehow before redirect
 	//echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";
 	echo ('<p><a href="index.php" data-rel="back">Back</a></div><!--/content-->');
-} 
+} else {
 
 $sql="SELECT * FROM $tbl_name WHERE username = '$newUser'";
 $result = mysql_query($sql);
 $count = mysql_num_rows($result);
 
-else if($count > 0) {
+if($count > 0) {
 	echo('<div data-role="header"><h1>Error</h1></div><div data-role="content">The user name you have chosen is taken. Please choose another one.');
 	echo ('<p><a href="index.php" data-rel="back">Back</a></div>');
 }
@@ -56,12 +56,12 @@ else {
 	
 	//autologin user
 	$_SESSION['username'] = "$newUser";
-	echo('<div data-role="header"><h1>Success!</h1></div><div data-role="content">Welcome to the Songbird family tree!<br>You are now logged in as'.$_SESSION['username'].'.');
+	echo('<div data-role="header"><h1>Success!</h1></div><div data-role="content">Welcome to the Songbird family tree!<p>You are now logged in as '.$_SESSION['username'].'.');
 	//want to make it pause somehow before redirect
 	//echo "<meta http-equiv='Refresh' content='0; URL=home.php'>";
 	echo ('<p><a href="home.php">Continue</a></div>');
 }
-
+}
 
 ?>
 </div><!--/content--> 

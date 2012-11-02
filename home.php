@@ -17,7 +17,7 @@ session_start();
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-	<title>Songbird - Home</title>
+	<title>Songbird</title>
 </head>
 
 <body class="ui-mobile-viewport">
@@ -53,12 +53,16 @@ session_start();
 
 <a href="" style="font-size:8pt;">Advanced Search</a> (not yet implemented)
 <p>
-<a href="browse.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
-            Browse
-        </a>
 <a href="myProfile.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
             My Profile
         </a>
+<a href="favs.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            My Favorites
+        </a>
+<a href="browse.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            Browse Projects
+        </a>
+
 <h2>My Projects</h2><br>
 Load project list here.
 <br><a href="project.php">Example Project</a>
