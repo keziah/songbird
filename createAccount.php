@@ -14,9 +14,10 @@
 	<script src="resources/jquery-1.8.2.min.js"></script>
 	<script src="resources/jquery.mobile-1.2.0.js"></script>
 </head>
-
+<body>
+<div data-role="page">
+<div data-role="content">
 <?php
-//header('Location:home.php');
 
 $tbl_name='users'; // Table name 
 $newUser=$_POST['username'];
@@ -47,4 +48,7 @@ else {
 
 
 ?>
-</head>
+</div><!--/content--> 
+</div><!--/page--> 
+</body>
+</html>
