@@ -6,14 +6,16 @@
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
-	<link rel="stylesheet" href="resources/jquery.mobile-1.2.0.css" />
-	<link rel="stylesheet" href="resources/style.css" />
+	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="images/appicon.png" />
-	<link rel="apple-touch-startup-image" href="startup.png">
+	<link rel="apple-touch-startup-image" href="images/startup.png">
 	
-	<script src="resources/jquery-1.8.2.min.js"></script>
-	<script src="resources/jquery.mobile-1.2.0.js"></script>
+	<script src="jquery-1.8.2.min.js"></script>
+	<script src="jquery.mobile-1.2.0.js"></script>
 </head>
+<body class="ui-mobile-viewport">
+
 <?php
 
 $host="localhost"; // Host name 
@@ -46,18 +48,34 @@ if($count==1){
 $_SESSION['username'] = "$username";
 $_SESSION['password'] = "$password";
 ?>
+<div data-role="page">
+<div data-role="header">
+<h1>Log In Succeeded</h1>
+</div>
+<div data-role="content">
 You have successfully logged in as
 <?php
 echo($_SESSION['username']);
 ?>
 !<p> You will be redirected to your home screen momentarily.
 <meta http-equiv="REFRESH" content="3; URL='home.php'">
+</div>
+</div>
 <?php
 }
 else {
-echo ("Wrong Username or Password");
-echo ('<p><a href="index.php">Back</a>');
-
+?>
+<div data-role="page">
+<div data-role="header">
+<h1>Log In Failed</h1>
+</div>
+<div data-role="content">
+Wrong Username or Password.
+<p><a href="index.php" class="ui-link">Back</a>
+</div>
+</div>
+<?php
 }
 ?>
+</body>
 </html>

@@ -34,7 +34,7 @@
 <h2>Log In</h2>
 <div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
-			<form id="login" action="checklogin.php" method="POST" accept-charset="UTF-8">
+			<form id="login" action="checklogin.php" method="POST" accept-charset="UTF-8" data-ajax="false">
 			<input type="text" name="username" id="username" maxlength="16" placeholder="Username"/>
 			<p>
 			<input type="password" name="password" id="password" maxlength="20" placeholder="Password" /><p>
@@ -62,7 +62,7 @@ Create Account</a>
 	<div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
 				Enter the email you used to sign up and we'll email you a link to reset your password!<p>
-				<form id="emailpass" action="reset.php" method="post">
+				<form id="emailpass" action="reset.php" method="POST">
 					<input type="email" name="email" placeholder="you@host.com"><p>
 					<input type="submit" name ="reset" value ="Submit"><p>
 				</form>
@@ -79,7 +79,7 @@ Create Account</a>
 <div data-role="content" role="main" class="ui-content ui-body-c">
 	<div data-role="fieldcontain">
 	<fieldset data-rolg = "controlgroup">
-	<form id="register" action="createAccount.php" method="POST">
+	<form id="register" action="createAccount.php" method="POST" data-ajax="false">
 		Choose a username:<br>
 		<br><input type="text" name="username" id="username" maxlength="16"/><p>
 		Email address:<br>
