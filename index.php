@@ -15,15 +15,11 @@
 	<link rel="apple-touch-icon" href="images/appicon.png" />
 	<link rel="apple-touch-startup-image" href="images/startup.png">
 	
-	<script src="resources/jquery-1.8.2.min.js"></script>
-	<script src="resources/jquery.mobile-1.2.0.js"></script>
+	<script src="jquery-1.8.2.min.js"></script>
+	<script src="jquery.mobile-1.2.0.js"></script>
 
 	<title>Songbird - Welcome!</title>
 
-
-
-
-<script src="resources/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#retrievePass").hide();
@@ -38,48 +34,67 @@ $(document).ready(function(){
 	});
 });
 </script>
-<script type="text">
-</script>
 </head>
+
 <body>
 <?php
 $link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147lilithwu', 'ahpobeiw');
 mysql_select_db('c_cs147_lilithwu');
 ?>
 
+<div data-role="page"> 
+<div data-role="header">
+<h1>Songbird</h1>
+</div><!-- /header-->
 
-App image here<p>
-Log In
+<div data-role="content">
+
+<h2>Log In</h2>
 <div id = "login-form">
 <form id ="login" action="checklogin.php" method="post" accept-charset="UTF-8">
 	<fieldset>
-	<label for="username">Username:</label><br>
-	<input type="text" name="username" id="username" maxlength="16"/><br>
-	<label for="password">Password:</label><br>
-	<input type="password" name="password" id="password" maxlength="20"/><p>
-	<input type="submit" name = "submitlogin" value="Login"/>
+	<input type="text" name="username" id="username" maxlength="16" placeholder="Username"/>
+	<p>
+	<input type="password" name="password" id="password" maxlength="20" placeholder="Password" /><p>
+	<input type="submit" name = "submitlogin" value="Log In"/>
 	
 	</fieldset>
 </form>
-</div>
 <p>
-<a href="javascript:void(0)" class="togglelogin">Forgot Password?</a>
-<div id="retrievePass">
-	<fieldset>
-	Enter the email you used to sign up 
-	<br>and we'll email you a link to reset your password!
-	<form id="emailpass" action="reset.php" method="post">
-		<input type="email" name="email"><br>
-		<input type="submit" name ="reset" value ="Submit"><p>
-		<a href="javascript:void(0)" class="togglelogin">Wait, I remember! Let me log in.</a>
-	</form>
-	</fieldset>
-</div>
+<a href="#resetPass" class="ui-link" data-rel="dialog" data-transition="pop">Forgot Password?</a>
 <p>
+<a href="#signup" class="ui-link" data-rel="dialog" data-transition="pop">Create Account</a>
+</div> <!--/content-->
+</div> <!--/first page-->
 
-<a href="javascript:void(0);" id="newAccount">Create Account</a>
-<div id="signup">
-	<fieldset>
+
+<!--Begin second page-->
+<div id="resetPass" data-role="page" class="ui-dialog ui-page ui-body-a" data-url="resetPass" role="dialog">
+<div data-role="header">
+<h1>Reset Password</h1>
+</div><!-- /header-->
+<div id="retrievePass" data-role="content">
+	<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+				Enter the email you used to sign up 
+				<br>and we'll email you a link to reset your password!
+				<form id="emailpass" action="reset.php" method="post">
+					<input type="email" name="email" placeholder="you@host.com"><br>
+						<input type="submit" name ="reset" value ="Submit"><p>
+				</form>
+			</fieldset>
+	</div>
+</div> <!--/content-->
+</div> <!--/second page-->
+
+<!--Begin third page-->
+<div id="signup" data-role="page" class="ui-dialog ui-page ui-body-a" data-url="signup" role="dialog">
+<div data-role="header">
+<h1>Create Account</h1>
+</div><!-- /header-->
+<div data-role="content">
+	<div data-role="fieldcontain">
+	<fieldset data-rolg = "controlgroup">
 	<form id="sign-up" action="createAccount.php" method="post">
 		<label for="username">Choose a username:</label><br>
 		<input type="text" name="username" id="username" maxlength="16"/><br>
@@ -90,9 +105,11 @@ Log In
 		<label for="password2">Confirm Password:</label><br>
 		<input type="password" name="password2" id="password2" maxlength="20"/><p>
 		<input type="submit" name = "submitNewUser" value="Submit"/>
-	</fieldset>
 	</form>
-</div>
-</body>
+	</fieldset>
+	</div>
+</div><!--/content-->
+</div> <!--/page-->
 
+</body>
 </html>
