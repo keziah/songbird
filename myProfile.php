@@ -24,68 +24,6 @@
 
 
 
-<script type="text/javascript" charset="utf-8">
-
-// <![CDATA[
-$(document).ready(function() {
-  $(".charcounter").editable("myProfile.php", { 
-      indicator : "<img src='img/indicator.gif'>",
-      type      : "charcounter",
-      submit    : 'OK',
-      tooltip   : "Click to edit...",
-      onblur    : "ignore",
-      charcounter : {
-         characters : 60
-      }
-  });
-    $(".autogrow").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : "autogrow",
-        submit    : 'OK',
-        cancel    : 'cancel',
-        tooltip   : "Click to edit...",
-        onblur    : "ignore",
-        autogrow : {
-           lineHeight : 16,
-           minHeight  : 32
-        }
-    });
-    $(".masked").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : "masked",
-        mask      : "99/99/9999",
-        submit    : 'OK',
-        tooltip   : "Click to edit..."
-    });
-    $(".datepicker").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : 'datepicker',
-        tooltip   : "Click to edit..."
-    });
-    $(".timepicker").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : 'timepicker',
-        submit    : 'OK',
-        tooltip   : "Click to edit..."
-    });
-    $(".time").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : 'time',
-        submit    : 'OK',
-        tooltip   : "Click to edit..."
-    });
-    $(".ajaxupload").editable("http://www.appelsiini.net/projects/jeditable/php/upload.php", { 
-        indicator : "<img src='img/indicator.gif'>",
-        type      : 'ajaxupload',
-        submit    : 'Upload',
-        cancel    : 'Cancel',
-        tooltip   : "Click to upload..."
-    });
-});
-// ]]>
-</script>  
-
-
 
 
 
@@ -129,7 +67,8 @@ $(document).ready(function() {
 
                         <li>Music Library<strong>185</strong></li>
 
-                       
+                       <br><a href="project.php">Example Project</a>
+
 
                     </ul>
 
