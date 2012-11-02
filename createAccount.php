@@ -17,7 +17,6 @@
 <body class="ui-mobile-viewport">
 
 <div data-role="page">
-<div data-role="content">
 <?php
 
 $tbl_name='users'; // Table name 
