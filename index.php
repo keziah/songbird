@@ -4,10 +4,6 @@
 	
 	
 	
-	
-	
-	
-	
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -16,23 +12,17 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
 
 	<link rel="stylesheet" href="style.css" />
-	<link rel="apple-touch-icon" href="appicon.png" />
-	<link rel="apple-touch-startup-image" href="startup.png">
+	<link rel="apple-touch-icon" href="images/appicon.png" />
+	<link rel="apple-touch-startup-image" href="images/startup.png">
 	
-	<script src="jquery-1.8.2.min.js"></script>
-	<script src="jquery.mobile-1.2.0.js"></script>
-	
-	
-	
-	
+	<script src="resources/jquery-1.8.2.min.js"></script>
+	<script src="resources/jquery.mobile-1.2.0.js"></script>
+
 	<title>Songbird - Welcome!</title>
-</head>
 
 
-<?php
-$link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147lilithwu', 'ahpobeiw');
-mysql_select_db('c_cs147_lilithwu');
-?>
+
+
 <script src="resources/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -50,9 +40,12 @@ $(document).ready(function(){
 </script>
 <script type="text">
 </script>
-
 </head>
 <body>
+<?php
+$link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147lilithwu', 'ahpobeiw');
+mysql_select_db('c_cs147_lilithwu');
+?>
 
 
 App image here<p>
