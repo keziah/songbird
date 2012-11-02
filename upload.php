@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function bytesToSize1024($bytes, $precision = 2) {
     $unit = array('B','KB','MB');

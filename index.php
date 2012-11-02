@@ -32,7 +32,7 @@ if (isset($_SESSION['username'])){
 ?>
 
 <!--Begin first page-->
-<div id="login" data-role="page"class="ui-page ui-body-c ui-page-active" data-url="login"> 
+<div id="login" data-role="page"class="ui-page ui-body-c ui-page-active" data-url="login" data-add-back-btn="false"> 
 <div data-role="header">
 <h1>Songbird</h1>
 </div><!-- /header-->
