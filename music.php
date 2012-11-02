@@ -32,6 +32,11 @@
 	
 
 	//insert music files here??
+		<audio controls="controls" height="50px" width="100px">
+  				<source src="resources/jeTaimePlus.mp3" type="audio/mpeg" />
+  				<!--<source src="song.ogg" type="audio/ogg" />-->
+				<embed height="50px" width="100px" src="jeTaimePlus.mp3" />
+	</audio>
 
 		<div data-role="fieldcontain">
 			
