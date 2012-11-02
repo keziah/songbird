@@ -15,8 +15,8 @@
 	<link rel="apple-touch-icon" href="images/appicon.png" />
 	<link rel="apple-touch-startup-image" href="images/startup.png">
 	
-	<script src="resources/jquery-1.8.2.min.js"></script>
-	<script src="resources/jquery.mobile-1.2.0.js"></script>
+	<script src="jquery-1.8.2.min.js"></script>
+	<script src="jquery.mobile-1.2.0.js"></script>
 
 	<title>Songbird - Welcome!</title>
 
@@ -56,7 +56,7 @@ mysql_select_db('c_cs147_lilithwu');
 	<input type="text" name="username" id="username" maxlength="16" placeholder="Username"/>
 	<p>
 	<input type="password" name="password" id="password" maxlength="20" placeholder="Password" /><p>
-	<input type="submit" name = "submitlogin" value="Login"/>
+	<input type="submit" name = "submitlogin" value="Log In"/>
 	
 	</fieldset>
 </form>
