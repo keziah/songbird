@@ -20,10 +20,6 @@
 
 	<title>Songbird - Welcome!</title>
 
-
-
-
-<script src="resources/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#retrievePass").hide();
@@ -38,17 +34,21 @@ $(document).ready(function(){
 	});
 });
 </script>
-<script type="text">
-</script>
 </head>
+
 <body>
 <?php
 $link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147lilithwu', 'ahpobeiw');
 mysql_select_db('c_cs147_lilithwu');
 ?>
 
+<div data-role="page"> 
+<div data-role="header">
+<h1>Songbird</h1>
+</div><!-- /header-->
 
-App image here<p>
+<div data-role="content">
+
 Log In
 <div id = "login-form">
 <form id ="login" action="checklogin.php" method="post" accept-charset="UTF-8">
@@ -93,6 +93,8 @@ Log In
 	</fieldset>
 	</form>
 </div>
-</body>
 
+</div><!--/content-->
+</body>
+</div> <!--/page-->
 </html>
