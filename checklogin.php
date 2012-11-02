@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,15 +16,13 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
+	
 </head>
 <body class="ui-mobile-viewport">
 
 <?php
-session_start();
 
 $host="localhost"; // Host name 
-$username=""; // Mysql username 
-$password=""; // Mysql password 
 $db_name=""; // Database name 
 $tbl_name="users"; // Table name 
 
@@ -48,10 +49,14 @@ if($count==1){
 // Register and redirect to file "loggedin.php"
 $_SESSION['username'] = "$username";
 $_SESSION['password'] = "$password";
+if(isset($_POST['remember'])){
+      setcookie("cookname", $_SESSION['username'], time()+60*60*24*100, "/");
+      setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
+   }
 ?>
 <div data-role="page">
 <div data-role="header">
-<h1>Log In Succeeded</h1>
+<h1>Logged In</h1>
 </div>
 <div data-role="content">
 You have successfully logged in as
@@ -68,7 +73,7 @@ else {
 ?>
 <div data-role="page">
 <div data-role="header">
-<h1>Log In Failed</h1>
+<h1>Failed</h1>
 </div>
 <div data-role="content">
 Wrong Username or Password.

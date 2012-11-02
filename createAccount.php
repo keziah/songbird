@@ -1,6 +1,11 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -18,8 +23,6 @@
 
 <div data-role="page">
 <?php
-
-session_start();
 
 $tbl_name='users'; // Table name 
 $newUser=$_POST['username'];
@@ -51,8 +54,9 @@ else {
 	$addUser = "INSERT INTO $tbl_name (`username`, `email`, `password`) VALUES('$newUser', 	'$newEmail', '$newPass')";
 	mysql_query($addUser);
 	
-	//want to now autologin new user
-	echo('<div data-role="header"><h1>Success!</h1></div><div data-role="content">Welcome to the Songbird family tree!');
+	//autologin user
+	$_SESSION['username'] = "$newUser";
+	echo('<div data-role="header"><h1>Success!</h1></div><div data-role="content">Welcome to the Songbird family tree!<br>You are now logged in as'.$_SESSION['username'].'.');
 	//want to make it pause somehow before redirect
 	//echo "<meta http-equiv='Refresh' content='0; URL=home.php'>";
 	echo ('<p><a href="home.php">Continue</a></div>');

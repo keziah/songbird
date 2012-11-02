@@ -1,6 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -14,24 +18,34 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<title>Songbird - Home</title>
-	
 </head>
 
 <body class="ui-mobile-viewport">
-<?php
-session_start();
-?>
+
 <div data-role="page">
 <div data-role="header">
-	<!--THIS LOGOUT MUST BE EDITED IN ALL PAGES-->
-	<a href="logout.php" data-icon="check" id="logout" class="ui-btn-right" data-ajax="false">Logout</a>
+	<!--THIS LOGOUT MUST BE ADDED AND EDITED IN ALL PAGES-->
 	<h1>Home</h1>
+		
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+
+<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+        <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+    </ul>
 </div>
+</div>
+
+
 <div data-role="content">
 	<div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
-            <form id="search" action="search.php" method="post">
-                <input name="query" id="query" placeholder="Search query" value="" type="search">
+            <form id="search" action="search.php" method="post" data-ajax="false">
+                <input name="query" id="query" placeholder="Search query" value="" type="search"> 
                 <input type="submit" name="submitsearch" value="Search" data-mini="true">
             </form>
             </fieldset>
@@ -39,8 +53,12 @@ session_start();
 
 <a href="" style="font-size:8pt;">Advanced Search</a> (not yet implemented)
 <p>
-<a href="browse.php"> Browse </a><p>
-<h2><a href="myProfile.php"> My Profile </a></h2><p>
+<a href="browse.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            Browse
+        </a>
+<a href="myProfile.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            My Profile
+        </a>
 <h2>My Projects</h2><br>
 Load project list here.
 <br><a href="project.php">Example Project</a>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -18,20 +21,30 @@
 	
 	<div data-role="header">
 		<h1>User Profile</h1>
+		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+        </a>
+		
+		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+
+	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+        <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+    </ul>
+	</div>
+
 	</div><!-- /header -->
-
-
-
-
-
-
-
 
 <div id="content" class="clearfix">
 
 <section id="center">
 
-<h1>Johnny Appleseed</h1>
+<h1><?php 
+		echo($_SESSION['username']);
+		?></h1>
 
         <section id="left">
 
