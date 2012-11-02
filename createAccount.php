@@ -14,7 +14,8 @@
 	<script src="resources/jquery-1.8.2.min.js"></script>
 	<script src="resources/jquery.mobile-1.2.0.js"></script>
 </head>
-<body>
+<body class="ui-mobile-viewport">
+
 <div data-role="page">
 <div data-role="content">
 <?php
