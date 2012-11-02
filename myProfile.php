@@ -21,15 +21,72 @@
 	</div><!-- /header -->
 
 
-<div class="edit" id="div_1">Dolor</div>
-<div class="edit_area" id="div_2">Lorem ipsum dolor sit amet, consectetuer 
-adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat volutpat.</div>
 
-<div>
+
+
+<script type="text/javascript" charset="utf-8">
+
+// <![CDATA[
 $(document).ready(function() {
-     $('.edit').editable('/myProfile.php');
-});</div>
+  $(".charcounter").editable("myProfile.php", { 
+      indicator : "<img src='img/indicator.gif'>",
+      type      : "charcounter",
+      submit    : 'OK',
+      tooltip   : "Click to edit...",
+      onblur    : "ignore",
+      charcounter : {
+         characters : 60
+      }
+  });
+    $(".autogrow").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : "autogrow",
+        submit    : 'OK',
+        cancel    : 'cancel',
+        tooltip   : "Click to edit...",
+        onblur    : "ignore",
+        autogrow : {
+           lineHeight : 16,
+           minHeight  : 32
+        }
+    });
+    $(".masked").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : "masked",
+        mask      : "99/99/9999",
+        submit    : 'OK',
+        tooltip   : "Click to edit..."
+    });
+    $(".datepicker").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : 'datepicker',
+        tooltip   : "Click to edit..."
+    });
+    $(".timepicker").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : 'timepicker',
+        submit    : 'OK',
+        tooltip   : "Click to edit..."
+    });
+    $(".time").editable("http://www.appelsiini.net/projects/jeditable/php/save.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : 'time',
+        submit    : 'OK',
+        tooltip   : "Click to edit..."
+    });
+    $(".ajaxupload").editable("http://www.appelsiini.net/projects/jeditable/php/upload.php", { 
+        indicator : "<img src='img/indicator.gif'>",
+        type      : 'ajaxupload',
+        submit    : 'Upload',
+        cancel    : 'Cancel',
+        tooltip   : "Click to upload..."
+    });
+});
+// ]]>
+</script>  
+
+
+
 
 
 <div id="content" class="clearfix">
