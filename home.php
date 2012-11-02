@@ -23,11 +23,15 @@
 	<h1>Home</h1>
 </div>
 <div data-role="content">
-<form id="search" action="search.php" method="post">
-	<label for="searchQuery">Search:</label></br>
-	<input type="text" name="searchQuery">
-	<input type="submit" name="submitsearch" value="Go!">
-</form>
+	<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+            <form id="search" action="search.php" method="post">
+                <input name="query" id="query" placeholder="Search query" value="" type="search">
+                <input type="submit" name="submitsearch" value="Search" data-mini="true">
+            </form>
+            </fieldset>
+    </div>
+
 <a href="" style="font-size:8pt;">Advanced Search</a> (not yet implemented)
 <p>
 <a href="browse.php"> Browse </a><p>
