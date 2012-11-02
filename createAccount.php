@@ -19,6 +19,8 @@
 <div data-role="page">
 <?php
 
+session_start();
+
 $tbl_name='users'; // Table name 
 $newUser=$_POST['username'];
 $newEmail=$_POST['email'];

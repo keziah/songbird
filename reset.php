@@ -15,6 +15,9 @@
 	<script src="resources/jquery.mobile-1.2.0.js"></script>
 </head>
 <body class="ui-mobile-viewport">
+<?php
+session_start();
+?>
 A link to reset your password has been sent to your email!
 <meta http-equiv="REFRESH" content="2; url='index.php'">
 </body>

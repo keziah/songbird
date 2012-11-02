@@ -17,6 +17,7 @@
 <body class="ui-mobile-viewport">
 
 <?php
+session_start();
 
 $host="localhost"; // Host name 
 $username=""; // Mysql username 

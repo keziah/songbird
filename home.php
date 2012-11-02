@@ -14,13 +14,17 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<title>Songbird - Home</title>
+	
 </head>
 
 <body class="ui-mobile-viewport">
+<?php
+session_start();
+?>
 <div data-role="page">
 <div data-role="header">
 	<!--THIS LOGOUT MUST BE EDITED IN ALL PAGES-->
-	<a href="index.php" data-icon="check" id="logout" class="ui-btn-right" data-ajax="false">Logout</a>
+	<a href="logout.php" data-icon="check" id="logout" class="ui-btn-right" data-ajax="false">Logout</a>
 	<h1>Home</h1>
 </div>
 <div data-role="content">

@@ -22,9 +22,11 @@
 </head>
 
 <body class="ui-mobile-viewport">
-
+<?php
+session_start();
+?>
 <!--Begin first page-->
-<div id="login" data-role="page"class="ui-page ui-body-c ui-page-active" data-url="login"> 
+<div id="login" data-role="page" data-url="login"> 
 <div data-role="header">
 <h1>Songbird</h1>
 </div><!-- /header-->
