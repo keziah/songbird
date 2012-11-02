@@ -19,68 +19,52 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 
 	<title>Songbird - Welcome!</title>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	$("#retrievePass").hide();
-	$("#signup").hide();
-	$(".togglelogin").click(function(){
-		$("#retrievePass").toggle("slow");
-		$("#login-form").toggle("slow");
-	});
-
-	$("#newAccount").click(function(){
-		$("#signup").toggle("medium");
-	});
-});
-</script>
 </head>
 
-<body>
-<?php
-$link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147lilithwu', 'ahpobeiw');
-mysql_select_db('c_cs147_lilithwu');
-?>
+<body class="ui-mobile-viewport">
 
-<div data-role="page"> 
+<!--Begin first page-->
+<div id="login" data-role="page"class="ui-page ui-body-c ui-page-active" data-url="login"> 
 <div data-role="header">
 <h1>Songbird</h1>
 </div><!-- /header-->
 
-<div data-role="content">
+<div class="ui-content" data-role="content" role="main">
 
 <h2>Log In</h2>
-<div id = "login-form">
-<form id ="login" action="checklogin.php" method="post" accept-charset="UTF-8">
-	<fieldset>
-	<input type="text" name="username" id="username" maxlength="16" placeholder="Username"/>
-	<p>
-	<input type="password" name="password" id="password" maxlength="20" placeholder="Password" /><p>
-	<input type="submit" name = "submitlogin" value="Log In"/>
-	
-	</fieldset>
-</form>
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+			<form id="login" action="checklogin.php" method="POST" accept-charset="UTF-8">
+			<input type="text" name="username" id="username" maxlength="16" placeholder="Username"/>
+			<p>
+			<input type="password" name="password" id="password" maxlength="20" placeholder="Password" /><p>
+			<input type="submit" name = "submitlogin" value="Log In"/>	
+			</form>
+			</fieldset>
+</div>
 <p>
-<a href="#resetPass" class="ui-link" data-rel="dialog" data-transition="pop">Forgot Password?</a>
+<a href="#reset" class="ui-link" data-rel="dialog" data-transition="pop">
+Forgot Password?</a>
 <p>
-<a href="#signup" class="ui-link" data-rel="dialog" data-transition="pop">Create Account</a>
+<a href="#signup" class="ui-link" data-rel="dialog" data-transition="pop">
+Create Account</a>
 </div> <!--/content-->
 </div> <!--/first page-->
 
 
 <!--Begin second page-->
-<div id="resetPass" data-role="page" class="ui-dialog ui-page ui-body-a" data-url="resetPass" role="dialog">
+<div id="reset" data-role="dialog" class="ui-dialog ui-page ui-body-a" data-url="reset" role="dialog">
 <div data-role="header">
 <h1>Reset Password</h1>
 </div><!-- /header-->
-<div id="retrievePass" data-role="content">
+
+<div data-role="content" class="ui-content ui-body-c" role="main">
 	<div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
-				Enter the email you used to sign up 
-				<br>and we'll email you a link to reset your password!
+				Enter the email you used to sign up and we'll email you a link to reset your password!<p>
 				<form id="emailpass" action="reset.php" method="post">
-					<input type="email" name="email" placeholder="you@host.com"><br>
-						<input type="submit" name ="reset" value ="Submit"><p>
+					<input type="email" name="email" placeholder="you@host.com"><p>
+					<input type="submit" name ="reset" value ="Submit"><p>
 				</form>
 			</fieldset>
 	</div>
@@ -88,21 +72,21 @@ mysql_select_db('c_cs147_lilithwu');
 </div> <!--/second page-->
 
 <!--Begin third page-->
-<div id="signup" data-role="page" class="ui-dialog ui-page ui-body-a" data-url="signup" role="dialog">
+<div id="signup" data-role="dialog" class="ui-dialog ui-page ui-body-a" data-url="signup" role="dialog">
 <div data-role="header">
 <h1>Create Account</h1>
 </div><!-- /header-->
-<div data-role="content">
+<div data-role="content" role="main" class="ui-content ui-body-c">
 	<div data-role="fieldcontain">
 	<fieldset data-rolg = "controlgroup">
-	<form id="sign-up" action="createAccount.php" method="post">
-		<label for="username">Choose a username:</label><br>
-		<input type="text" name="username" id="username" maxlength="16"/><br>
-		<label for="email">Email address:</label><br>
-		<input type="email" name="email"><br>
-		<label for="password">Choose a Password:</label><br>
-		<input type="password" name="password" id="password" maxlength="20"/><br>
-		<label for="password2">Confirm Password:</label><br>
+	<form id="register" action="createAccount.php" method="POST">
+		Choose a username:<br>
+		<br><input type="text" name="username" id="username" maxlength="16"/><p>
+		Email address:<br>
+		<input type="email" name="email"><p>
+		Choose a Password:<br>
+		<input type="password" name="password" id="password" maxlength="20"/><p>
+		Confirm Password:<br>
 		<input type="password" name="password2" id="password2" maxlength="20"/><p>
 		<input type="submit" name = "submitNewUser" value="Submit"/>
 	</form>
