@@ -21,6 +21,15 @@
 	</div><!-- /header -->
 
 
+<div class="edit" id="div_1">Dolor</div>
+<div class="edit_area" id="div_2">Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+magna aliquam erat volutpat.</div>
+
+<div>
+$(document).ready(function() {
+     $('.edit').editable('/myProfile.php');
+});</div>
 
 
 <div id="content" class="clearfix">
