@@ -19,7 +19,8 @@
 <body class="ui-mobile-viewport">
 <div data-role="page">
 <div data-role="header">
-	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+	<!--THIS LOGOUT MUST BE EDITED IN ALL PAGES-->
+	<a href="index.php" data-icon="check" id="logout" class="ui-btn-right" data-ajax="false">Logout</a>
 	<h1>Home</h1>
 </div>
 <div data-role="content">
