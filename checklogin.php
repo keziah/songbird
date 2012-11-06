@@ -64,7 +64,7 @@ You have successfully logged in as
 echo($_SESSION['username']);
 ?>
 !<p> You will be redirected to your home screen momentarily.
-<meta http-equiv="REFRESH" content="3; URL='home.php'">
+<meta http-equiv="REFRESH" content="0; URL='home.php'">
 </div>
 </div>
 <?php
