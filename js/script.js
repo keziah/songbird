@@ -44,11 +44,11 @@ function fileSelected() {
         return;
     }*/
 
-    // little test for filesize
+    /* little test for filesize
     if (oFile.size > iMaxFilesize) {
         document.getElementById('warnsize').style.display = 'block';
         return;
-    }
+    }*/
 
     // get preview element
     var oImage = document.getElementById('preview');

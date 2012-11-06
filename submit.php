@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -36,8 +39,6 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
 
-	
-
 </head>  
 <body> 
 
@@ -58,11 +59,18 @@
 	
 		
 	<div id="info">
-		<p>Thank you for logging. You should be able to see all sorts of user information here.</p>
+		
 	</div>	
 	</div><!-- /content -->
 	
-	
+<div id="form">
+	<form action="submission.php" method="post">
+	<p><label for="message">Project Name</label>
+		<input type="text" name="projectname" maxlength="140"></p>
+	<p><label for="password">Song File Name</label>
+		<input type="text" name="songname" maxlength="140"></p>
+	<input class="submit" type="submit" value="Send">
+</form></div>	
 	
 	
 
@@ -109,6 +117,15 @@
             </div>
         </div>
         
+
+	   
+   
+   
+   
+   
+   
+   
+   
         
 <div class="container">
             

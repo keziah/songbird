@@ -1,6 +1,10 @@
+	<?php
+	session_start();
+	?>
 <html>
 
 <head>
+
 	<title>Songbird</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,23 +19,42 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-	        <script src="js/script.js"></script>
+	<script src="js/script.js"></script>
 
 	
 <body>
+<?php
+
+?>
 <div data-role="page" id="one">
 
 	<div data-role="header">
 		<h1>Project Page</h1>
+		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+        </a>
+		
+		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+
+	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+        <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+    </ul>
+	</div>
+		
+		
+		
+		
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<h2>Welcome <span id="username"></span></h2>
 		
 		<p>The neat thing about this example is that you can swipe right and left to navigate between pages, and you can also see in the code that the entire three page sequence within here is bundled into one page.</p>	
-		
 
-		<h3>Show internal pages:</h3>
 		
 	</div><!-- /content -->
 	
