@@ -52,11 +52,12 @@ if (isset($_SESSION['username'])){
 		</fieldset>
 </div>
 <p>
-<a href="#reset" class="ui-link" data-rel="dialog" data-transition="pop">
-Forgot Password?</a>
-<p>
 <a href="#signup" class="ui-link" data-rel="dialog" data-transition="pop">
 Create Account</a>
+<p>
+<a href="#reset" class="ui-link" data-rel="dialog" data-transition="pop">
+Forgot Password?</a>
+
 </div> <!--/content-->
 </div> <!--/first page-->
 
