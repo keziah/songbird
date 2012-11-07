@@ -26,7 +26,7 @@ session_start();
 <?php
 if (isset($_SESSION['username'])){
 	?>
-	<meta http-equiv="REFRESH" content="0; url='home.php'">
+	<meta http-equiv="REFRESH" content="0; url='myProfile.php'">
 	<?php
 }
 ?>
