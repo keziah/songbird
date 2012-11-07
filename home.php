@@ -63,6 +63,9 @@ session_start();
 <a href="browse.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
             Browse Projects
         </a>
+        <a href="createnew.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            Create New Project
+        </a>
 
 <h2>My Projects</h2><br>
 Load project list here.

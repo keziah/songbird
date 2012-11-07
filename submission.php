@@ -24,34 +24,20 @@ session_start();
 </html>
 
 <div class="ui-bar ui-bar-b">
-	<h3><a href="submit.php" data-role="button" data-mini="true">Back</a></h3>
+	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+        </a>
 </div>
-
-/*
-<style type="text/css">
-.blue {
-	color:blue;
-	font-weight:bold;
-}
-body {
-	font-family:Helvetica;
-}
-</style>
-*/
 
 <body>
 <?php
 $message = $_POST["projectname"];
-$product = $_POST["songname"];
+$user = $_SESSION['username'];
 
-echo "<p>Project name: ".$message."</p>";
-echo "<p>Song file name: ".$product."</p>";
+echo "<p>New project name: ".$message."</p>";
 
 include("config.php");
-$query2 = "insert into projects values ('$message', '$product')";
+$query2 = "insert into projects values ('$message', '$user')";
 $result2 = mysql_query($query2);
 
 ?>
 </body>
-
-data-direction="reverse"
