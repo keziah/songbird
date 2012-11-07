@@ -56,6 +56,7 @@ session_start();
 <a href="myProfile.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
             My Profile
         </a>
+        
 <a href="favs.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
             My Favorites
         </a>

@@ -27,39 +27,109 @@ session_start();
 
 	<div data-role="header">
 	<h1>Music</h1>
+	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+        </a>
+		
+		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+			<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
+       <li><a data-rel="popup" href="music.php" data-ajax="false">Add Audio</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+         
+    </ul>
+	</div>
+
 	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
 
 	</div><!-- /header -->
 
 	<div data-role="content">
 	
-
+<!--
 	//insert music files here??
 		<audio controls="controls" height="50px" width="100px">
   				<source src="resources/jeTaimePlus.mp3" type="audio/mpeg" />
-  				<!--<source src="song.ogg" type="audio/ogg" />-->
+  				<source src="song.ogg" type="audio/ogg" />
 				<embed height="50px" width="100px" src="jeTaimePlus.mp3" />
 	</audio>
+	
+	-->
+	
+	<embed autostart="false" src="jetaimeplus.mp3" />
 
 		<div data-role="fieldcontain">
 			
 		</div>	
+		
+		
+<!-- Begin Rio's Audio Code -->
+		 <div class="container">
+            
+            <div class="upload_form_cont">
+                <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php">
+                    <div>
+                        <div><label for="image_file">Begin recording into the video, then press Upload</label></div>
+                        <div><input type="file" accept="video/*" name="image_file" id="image_file" onchange="fileSelected();" /></div>
+                       
+
+                                            </div>
+                    
+                    <div>
+                        <input class="button green bigrounded" type="button" value="Upload" onclick="startUploading()" />
+                    </div>
+                    <div id="fileinfo">
+                        <div id="filename"></div>
+                        <div id="filesize"></div>
+                        <div id="filetype"></div>
+                        <div id="filedim"></div>
+                    </div>
+                    <div id="error"></div>
+                    <div id="error2">An error occurred while uploading the file</div>
+                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                    <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+
+                    <div id="progress_info">
+                        <div id="progress"></div>
+                        <div id="progress_percent">&nbsp;</div>
+                        <div class="clear_both"></div>
+                        <div>
+                            <div id="speed">&nbsp;</div>
+                            <div id="remaining">&nbsp;</div>
+                            <div id="b_transfered">&nbsp;</div>
+                            <div class="clear_both"></div>
+                        </div>
+                        <div id="upload_response"></div>
+                    </div>
+                </form>
+
+                <img id="preview" />
+            </div>
+        </div>
+        
+<!-- /End Rio's Audio Code -->
+		
+		
+		
 	
 		
 	<div id="info">
 
-		<embed src="uploads/Starlight.mp3" autostart="false" loop="false">
+		<!--<embed src="uploads/Starlight.mp3" autostart="false" loop="false">-->
 
 	</div>	
 	</div><!-- /content -->
 
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
 				<li><a href="project.php" id="info" data-icon="custom">Info</a></li>
 				<li><a href="music.php" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
 				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
-				<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>
+				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 		</ul>
 		</div>
 	</div>

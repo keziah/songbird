@@ -30,7 +30,7 @@
 
 	<div data-role="header">
 		<h1>Project Page</h1>
-		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+		<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
 		
 		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
@@ -39,9 +39,11 @@
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
     	<li>Logged in as <?php 
     		echo($_SESSION['username']);?></li> 
-        <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>
+       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
+       <li><a data-rel="popup" href="project.php" data-ajax="false">Edit Project Info</a></li>
         <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
         <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+         
     </ul>
 	</div>
 		
@@ -59,12 +61,12 @@
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
 				<li><a href="project.php" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
 				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
 				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
-				<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>
+				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 			</ul>
 		</div>
 	</div>

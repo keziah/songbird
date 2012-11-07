@@ -37,18 +37,18 @@ function fileSelected() {
     // get selected file element
     var oFile = document.getElementById('image_file').files[0];
 
-    /* filter for image files
+    // filter for image files
     var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
     if (! rFilter.test(oFile.type)) {
         document.getElementById('error').style.display = 'block';
         return;
-    }*/
+    }
 
-    /* little test for filesize
+    // little test for filesize
     if (oFile.size > iMaxFilesize) {
         document.getElementById('warnsize').style.display = 'block';
         return;
-    }*/
+    }
 
     // get preview element
     var oImage = document.getElementById('preview');
@@ -99,7 +99,7 @@ function startUploading() {
     oXHR.addEventListener('load', uploadFinish, false);
     oXHR.addEventListener('error', uploadError, false);
     oXHR.addEventListener('abort', uploadAbort, false);
-    oXHR.open('POST', 'upload.php');
+    oXHR.open('POST', 'uploadAudio.php');
     oXHR.send(vFD);
 
     // set inner timer

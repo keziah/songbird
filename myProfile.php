@@ -20,9 +20,11 @@ session_start();
 	<script src="jquery.mobile-1.2.0.js"></script>
 	
 	<div data-role="header">
-		<h1>User Profile</h1>
+		<h1>User Profile Home</h1>
+		<!-- COMMENTED OUT HOME BUTTON
 		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
+        -->
 		
 		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
 
@@ -30,7 +32,7 @@ session_start();
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
     	<li>Logged in as <?php 
     		echo($_SESSION['username']);?></li> 
-        <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>
+       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
         <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
         <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
     </ul>
@@ -64,23 +66,19 @@ session_start();
 
                     <h3>San Francisco, CA</h3>
 
-                 <h4><a href="http://spyrestudios.com/">http://spyrestudios.com/</a></h4>
+                 <h4><a href="http://google.com/">http://YOUR-WEBSITE-NAME-HERE.com/</a></h4>
 
-                    <div class="socialMediaLinks">
 
-                        <a href="http://twitter.com/jakerocheleau" rel="me" target="_blank"><img src="img/twitter.png" alt="@jakerocheleau" /></a>
+<!--Right now the new project button is just linking to project.php. This might need to change later -->
 
-                        <a href="http://gowalla.com/users/JakeRocheleau" rel="me" target="_blank"><img src="img/gowalla.png" /></a>
-
-                    </div>
-
-                    <div class="sep"></div>
-
-                    <ul class="numbers clearfix">
-
-                        <li>Music Library<strong>185</strong></li>
-
-                       <br><a href="project.php">Example Project</a>
+<a href="project.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+            Create a new project
+        </a>
+<h2>My Projects</h2>
+<a href="project.php">Example Project</a>
+<br>More example projects go here.
+<br>And here.
+<br>And here.
 
 
                     </ul>
