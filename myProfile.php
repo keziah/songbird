@@ -20,8 +20,7 @@
 	
 	<div data-role="header">
 		<h1>Home</h1>
-		<a class="ui-btn-right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"></a>
-		<!-- COMMENTED OUT HOME BUTTON
+				<!-- COMMENTED OUT HOME BUTTON
 		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
         -->
@@ -43,7 +42,10 @@
 
 
 <div id="content" class="clearfix">
-<!--help popup-->
+<!--help popup code below-->
+<!--help button-->
+<a class="ui-btn-right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"></a>
+<!--help div-->
 <div data-role="popup" id="help">
 		<p>This is the user profile that people will be able to see when they click on 		your username. To edit information, click EDIT.
 		<p>HOME will redirect you to the home page where you can search, browse, or 		view your own projects.
