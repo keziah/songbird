@@ -19,27 +19,37 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 	
 	<div data-role="header">
-		<h1>User Profile Home</h1>
+		<h1>Home</h1>
+		<a class="ui-btn-right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"></a>
 		<!-- COMMENTED OUT HOME BUTTON
 		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
         -->
-		
 		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+		
 
+	
 	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
     	<li>Logged in as <?php 
     		echo($_SESSION['username']);?></li> 
        <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
-        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
-        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+        
+<li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
     </ul>
 	</div>
-
 	</div><!-- /header -->
 
+
+
 <div id="content" class="clearfix">
+<!--help popup-->
+<div data-role="popup" id="help">
+		<p>This is the user profile that people will be able to see when they click on 		your username. To edit information, click EDIT.
+		<p>HOME will redirect you to the home page where you can search, browse, or 		view your own projects.
+		<p>OPTIONS will allow you to view profile, get help, or log out.
+		A list of your projects can also be seen from your user profile. 
+		</div>
 
 <section id="center">
 
