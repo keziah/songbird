@@ -21,6 +21,10 @@
     return ($byte1 + ($byte2*256));
   }
   
+  
+	include("config.php");
+	$song = $_GET['songfilename'];
+
 
     /**
      * PROCESS THE FILE

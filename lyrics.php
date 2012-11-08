@@ -45,8 +45,30 @@
 
 	<div data-role="content">
 	
+	
+	<?php
+	include("config.php");
+	$project = $_GET['projectname'];
+	?>
+	
+	<?php 
+	
+	
+	$sql="SELECT * FROM projectinfo WHERE projectname = '$project'";
+	$result = mysql_query($sql);
+	$count = mysql_num_rows($result);
+	
+	
+		$row = mysql_fetch_assoc($result);
+		echo "".$row["lyrics"]."";
 
-	<p>upload lyrics and sheet music here </p>
+	
+		?>	
+	
+	
+	
+	
+
 
 		<div data-role="fieldcontain">
 			
@@ -54,7 +76,6 @@
 	
 		
 	<div id="info">
-		<p>Thank you for logging. You should be able to see all sorts of user information here.</p>
 	</div>	
 	</div><!-- /content -->
 

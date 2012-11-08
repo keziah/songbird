@@ -99,8 +99,9 @@ function startUploading() {
     oXHR.addEventListener('load', uploadFinish, false);
     oXHR.addEventListener('error', uploadError, false);
     oXHR.addEventListener('abort', uploadAbort, false);
-    oXHR.open('POST', 'uploadAudio.php');
+    oXHR.open('POST', 'uploadAudio.php?songname='+'songfilename');
     oXHR.send(vFD);
+    
 
     // set inner timer
     oTimer = setInterval(doInnerUpdates, 300);

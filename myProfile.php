@@ -41,17 +41,17 @@
 
 
 
-<div id="content" class="clearfix">
+<div id="content" class="clearfix" style="padding:20px">
 <!--help popup code below-->
 <!--help button-->
-<a class="ui-btn-right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"></a>
+<a class="ui-btn-right" style="float:right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"> </a>
+
 <!--help div-->
 <div data-role="popup" id="help">
-		<p>This is the user profile that people will be able to see when they click on 		your username. To edit information, click EDIT.
-		<p>HOME will redirect you to the home page where you can search, browse, or 		view your own projects.
-		<p>OPTIONS will allow you to view profile, get help, or log out.
-		A list of your projects can also be seen from your user profile. 
-		</div>
+<a href="#" data-role="button" class="ui-btn-left" data-iconpos="notext" data-icon="delete" data-rel="back"> </a>
+		<p>This is your home page. From here, you can create a new project or manage the projects you have already created. 		
+		<p>You can always return to this page by clicking HOME on the top left of any other page.
+		</div></div>
 
 <section id="center">
 
