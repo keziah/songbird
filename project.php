@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-	<?php session_start();
-	?>
-=======
 <?php session_start();
 ?>
->>>>>>> e2aa5cf74f6cdd91d0c8afa0513763484ddd549c
+
 <html>
 
 <head>
@@ -86,9 +82,10 @@
 	
 		$row = mysql_fetch_assoc($result);
 		echo "".$row["info"]."";
-
+	
 	
 		?>
+		<a href="#editform" data-rel="dialog" data-role="button" id="editinfo" data-transition="pop">Edit Project Notes</a>
 			
 
 		
@@ -108,96 +105,21 @@
 	
 </div><!-- /page one -->
 
-
-<!-- Start of second page: #two -->
-
-
-/*
-<div data-role="page" id="two" data-add-back-btn="true">
-
-	<div data-role="header">
-		<h1>Two</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-		<h2>Two</h2>
-		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>	
-		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>	
-		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>	
-		
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
-		
-		<ul>
-			<li><a href="project1.php" id="infoInfo" data-icon="custom">Info</a></li>
-			<li><a href="login.php" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
-			<li><a href="filter.php" id="lyrics" data-icon="custom">Lyrics</a></li>
-			<li><a href="#" id="submit" data-icon="custom">Submit</a></li>
-		</ul>
-		</div>
-	</div>
+<div data-role="page" id="editform">
+<div data-role="header">
+<h1>Edit Project Notes</h1>
 </div>
-</div><!-- /page two -->
+<div data-role="content">
 
+<form action="editinfo.php" id="editinfo" data-ajax="false">
+<input type="text" name="" id="edited" value="<?php echo $row['info'];?>"/>
+<input type="submit" name="submit" value="Submit"/>
+</form>
 
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="e">
-		<h1>Dialog</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="d">	
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
-		<ul>
-			<li><a href="project1.php" id="info" data-icon="custom">Info</a></li>
-			<li><a href="login.php" id="music" data-icon="custom">Music</a></li>
-			<li><a href="filter.php" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>
-			<li><a href="#" id="skull" data-icon="custom">Submit</a></li>
-		</ul>
-		</div>lyrics
-	</div>music
 </div>
-</div><!-- /page popup -->*/
+</div>
 
-<script type="text/javascript">
-// This handles all the swiping between each page. You really
-// needn't understand it all.
-$(document).on('pageshow', 'div:jqmData(role="page")', function(){
 
-     var page = $(this), nextpage, prevpage;
-     // check if the page being shown already has a binding
-      if ( page.jqmData('bound') != true ){
-            // if not, set blocker
-            page.jqmData('bound', true)
-            // bind
-                .on('swipeleft.paginate', function() {
-                    console.log("binding to swipe-left on "+page.attr('id'));
-                    nextpage = page.next('div[data-role="page"]');
-                    if (nextpage.length > 0) {
-                       $.mobile.changePage(nextpage,{transition: "slide"}, false, true);
-                        }
-                    })
-                .on('swiperight.paginate', function(){
-                    console.log("binding to swipe-right "+page.attr('id'));
-                    prevpage = page.prev('div[data-role="page"]');
-                    if (prevpage.length > 0) {
-                        $.mobile.changePage(prevpage, {transition: "slide",
-	reverse: true}, true, true);
-                        };
-                     });
-            }
-        });
-
-</script>
 
 </body>	
 	
