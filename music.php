@@ -58,12 +58,63 @@
 	
 	-->
 	
-	<embed autostart="false" src="jetaimeplus.mp3" />
+	<?php
+	include("config.php");
+	$project = $_GET['projectname'];
+	?>
+	
+	<p>Music Files:</p>
+	
+				<?php 
+	
+	
+	$sql="SELECT * FROM musicfiles WHERE projectname = '$project'";
+	$result = mysql_query($sql);
+	$count = mysql_num_rows($result);
+	
+	$songs = array();
+	
+	if ($count > 0) {
+		while ($row = mysql_fetch_assoc($result)) {
+			$song = $row["filename"];
+			array_push($songs, $song);
+			
+			?>
+			<embed autostart="false" src="uploads/<?php echo $song; ?>" />
+			<p>
+			<?php
+			
+		}
+	}
+		
+		?>
+		
+		
+		<!--
+					<embed autostart="false" src="uploads/<?php echo $filenames[0]; ?>" />
+-->
+		
+			<embed autostart="false" src="jetaimeplus.mp3" />
+
+	<!--	
+	<script type="text/javascript">
+
+	var arrayCount = "<? echo $count; ?>";
+	var arrNum = parseInt(arrayCount);
+	echo arrayCount;
+
+	if(<?php $count > 0 ?>) {
+		echo "test";
+		<embed autostart="false" src="uploads/<?php echo $filenames[0]; ?>" />
+		<p>	
+	}
+	</script>
+	
 
 		<div data-role="fieldcontain">
 			
 		</div>	
-		
+		-->
 		
 <!-- Begin Rio's Audio Code -->
 		 <div class="container">

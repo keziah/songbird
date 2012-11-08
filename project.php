@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 <?php session_start();
 ?>
 
+=======
+	<?php session_start();
+	?>
+>>>>>>> 6e319abc3e58f85b330f8de3b73a1b0229528d92
 <html>
 
 <head>
@@ -95,8 +100,8 @@
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
 				<li><a href="project.php" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
-				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
-				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
+				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
 				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 			</ul>
 		</div>
