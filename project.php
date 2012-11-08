@@ -1,5 +1,4 @@
-	<?php
-	session_start();
+	<?php session_start();
 	?>
 <html>
 
@@ -51,17 +50,41 @@
 		
 		
 	</div><!-- /header -->
-	
-	
-	<?php $project = $_GET['projectname'];?>
-	
+	<?php
+	include("config.php");
+	$project = $_GET['projectname'];
+	?>
+
 	
 	
 
 	<div data-role="content">	
-		<h2>Welcome <span id="username"></span></h2>
+		<h2><?php echo "$project" ?> <span id="username"></span></h2>
 		
-		<p>The neat thing about this example is that you can swipe right and left to navigate between pages, and you can also see in the code that the entire three page sequence within here is bundled into one page.</p>	
+		<p>Project Notes:</p>
+		
+		
+		
+			<?php 
+	
+	
+	$sql="SELECT * FROM projectinfo WHERE projectname = '$project'";
+	$result = mysql_query($sql);
+	$count = mysql_num_rows($result);
+	
+	if($count < 1) {
+		$stdinfo = "This is my project.";
+		$addProject = "INSERT INTO projectinfo (`projectname`, `info`) VALUES('$project','$stdinfo')";
+		mysql_query($addProject);
+		$result = mysql_query($sql);
+	}
+	
+		$row = mysql_fetch_assoc($result);
+		echo "".$row["info"]."";
+
+	
+		?>
+			
 
 		
 	</div><!-- /content -->

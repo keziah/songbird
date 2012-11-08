@@ -70,6 +70,12 @@ session_start();
 <h2>My Projects</h2><br>
 Load project list here.
 <br><a href="project.php">Example Project</a>
+
+<form method="get" action="project.php">
+    <input type="hidden" name="projectname" value="song1">
+    <input type="submit" value="Go to new project">
+</form>
+
 </div>
 </div>
 </body>
