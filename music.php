@@ -89,7 +89,7 @@
 		
 		?>
 		
-		
+		<p>is this updating?</p>
 		<!--
 					<embed autostart="false" src="uploads/<?php echo $filenames[0]; ?>" />
 -->
@@ -121,6 +121,9 @@
             
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php">
+           
+                		<input type="text" name="songfilename" placeholder="Recording Name" maxlength="140"></p>
+
                     <div>
                         <div><label for="image_file">Begin recording into the video, then press Upload</label></div>
                         <div><input type="file" accept="video/*" name="image_file" id="image_file" onchange="fileSelected();" /></div>
@@ -176,9 +179,9 @@
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-				<li><a href="project.php" id="info" data-icon="custom">Info</a></li>
-				<li><a href="music.php" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
-				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom">Info</a></li>
+				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
+				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
 				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 		</ul>
 		</div>
