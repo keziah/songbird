@@ -71,7 +71,7 @@ session_start();
 
 <!--Right now the new project button is just linking to project.php. This might need to change later -->
 
-<a href="project.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
+<a href="createnew.php" data-role="button" data-theme="c" data-icon="arrow-r"data-iconpos="right" data-ajax="false">
             Create a new project
         </a>
 <h2>My Projects</h2>

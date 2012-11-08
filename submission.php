@@ -20,13 +20,30 @@ session_start();
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
 	
-</head>
-</html>
 
-<div class="ui-bar ui-bar-b">
-	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
+
+<div data-role="header">
+		<h1>Project Page</h1>
+		<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
-</div>
+		
+		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+
+	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
+       <li><a data-rel="popup" href="project.php" data-ajax="false">Edit Project Info</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+         
+    </ul>
+	</div>
+		
+	</div>
+
+
 
 <body>
 <?php
@@ -36,8 +53,21 @@ $user = $_SESSION['username'];
 echo "<p>New project name: ".$message."</p>";
 
 include("config.php");
-$query2 = "insert into projects values ('$message', '$user')";
+$query2 = "insert into projects values ('$user', '$message')";
 $result2 = mysql_query($query2);
 
 ?>
+
+
+
+<form method="get" action="project.php">
+    <input type="hidden" name="projectname" value="<?php echo "".$message."" ?>">
+    <input type="submit" value="Go to new project">
+</form>
+
+
+
 </body>
+
+</head>
+</html>

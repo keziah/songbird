@@ -51,6 +51,12 @@
 		
 		
 	</div><!-- /header -->
+	
+	
+	<?php $project = $_GET['projectname'];?>
+	
+	
+	
 
 	<div data-role="content">	
 		<h2>Welcome <span id="username"></span></h2>
