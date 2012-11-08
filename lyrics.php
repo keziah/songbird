@@ -61,10 +61,11 @@
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-				<li><a href="lyrics.php" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>
+				
 				<li><a href="project.php" id="info" data-icon="custom">Info</a></li>
 				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
-								<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
+				<li><a href="lyrics.php" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>				
+				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 		</ul>
 		</div>
 	</div>
