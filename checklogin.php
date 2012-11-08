@@ -48,24 +48,13 @@ if($count==1){
 // Register and redirect to file "loggedin.php"
 $_SESSION['username'] = "$username";
 $_SESSION['password'] = "$password";
-if(isset($_POST['remember'])){
-      setcookie("cookname", $_SESSION['username'], time()+60*60*24*100, "/");
-      setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
-   }
-?>
-<div data-role="page">
-<div data-role="header">
-<h1>Logged In</h1>
-</div>
-<div data-role="content">
-You have successfully logged in as
-<?php
-echo($_SESSION['username']);
-?>
-!<p> You will be redirected to your home screen momentarily.
-<meta http-equiv="REFRESH" content="0; URL='myProfile.php'">
-</div>
-</div>
+	if(isset($_POST['remember'])){
+	      setcookie("cookname", $_SESSION['username'], time()+60*60*24*100, "/");
+	      setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
+	   }
+	?>
+	<meta http-equiv="REFRESH" content="0; URL='myProfile.php'">
+
 <?php
 }
 else {
