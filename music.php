@@ -81,7 +81,13 @@ include("config.php");
 			
 			?>
 			<!-- include("wave_form.php"); -->
-			<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">My song</a>
+			
+			<video width="320" height="240" controls="controls">
+  				<source src="uploads/<?php echo $song; ?>" type="video/mp4">
+  				<source src="movie.ogg" type="video/ogg">
+  				Your browser does not support the video tag.
+				</video>
+			
 			<p>
 			<?php
 			
@@ -92,6 +98,8 @@ include("config.php");
 		
 		<!--
 								<embed autostart="false" src="uploads/<?php echo $song; ?>" />
+											<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">My song</a>
+
 
 -->
 		

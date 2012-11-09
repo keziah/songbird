@@ -63,12 +63,8 @@ include("config.php");
 		echo "".$row["lyrics"]."";
 
 	
-		?>	
-	
-	
-	
-	
-
+	?>	
+	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
 
 		<div data-role="fieldcontain">
 			
@@ -91,7 +87,8 @@ include("config.php");
 		</ul>
 		</div>
 	</div>
-	<script type="text/javascript">
+	
+	<!--<script type="text/javascript">
 	$("#logout").hide();
 	$("#info").hide();
 	var retrievedObject = localStorage.getItem('username');
@@ -107,7 +104,32 @@ include("config.php");
 		$("#info").hide();
 	});
 	</script>
+	-->
 </div><!-- /page -->
+
+
+<div data-role="page" id="editlyrics" class="ui-dialog ui-page ui-body-c" data-url="editlyrics" role="dialog">
+<div data-role="header">
+<h1>Edit Lyrics</h1>
+</div>
+<div data-role="content">
+<?php
+$oldInfo =$row['info'];
+?>
+<form action="editlyrics.php" id="editinfo" method="POST" data-ajax="false">
+<div data-role="fieldcontain">
+	<textarea cols="40" rows="8" name="newLyrics"><?php echo "".$row["lyrics"]."" ?> </textarea>
+	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/>
+	<input type="submit" value="Submit"/>
+</div>
+
+
+<input type="submit" name="submit" value="Submit"/>
+</form>
+
+</div><!-- /content -->
+</div><!-- /page two -->
+
 
 </body>
 </html>

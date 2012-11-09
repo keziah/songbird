@@ -1,13 +1,6 @@
-
 <?php session_start();
 include("config.php");
 ?>
-
-
-<?php 
-include("config.php");
-session_start();
-	?>
 
 <html>
 
