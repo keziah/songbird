@@ -35,9 +35,8 @@ include("config.php");
     	<li>Logged in as <?php 
     		echo($_SESSION['username']);?></li> 
        <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
-       <li><a data-rel="popup" href="project.php" data-ajax="false">Edit Project Info</a></li>
-        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
-        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+       <li><a data-rel="popup" href="createnew.php" data-ajax="false">New Project</a></li>
+       <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
          
     </ul>
 	</div>
