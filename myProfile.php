@@ -86,6 +86,29 @@
             Create a new project
         </a>
 <h2>My Projects</h2>
+
+<?php
+	include("config.php");
+	$user = $_SESSION['username'];
+	$sql="SELECT * FROM projects WHERE username = '$user'";
+	$result = mysql_query($sql);
+	$count = mysql_num_rows($result);
+	
+	if ($count > 0) {
+		while ($row = mysql_fetch_assoc($result)) {
+			$project = $row["projectname"];
+			?>
+			
+			<a href="project.php?projectname=<?php echo "".$project."" ?>"><?php echo $project ?> </a>
+			<p>
+			<?php
+			
+		}
+	}
+	
+	?>
+
+
 <a href="project.php">Example Project</a>
 <br>More example projects go here.
 <br>And here.

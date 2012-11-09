@@ -23,11 +23,7 @@
   
   
 	include("config.php");
-<<<<<<< HEAD
-	$song = $_GET['songname'];
-=======
 	$song = $_GET['songfilename'];
->>>>>>> 0486c3959ad716860368c8562ad0b08f151b6532
 
 
     /**
@@ -45,7 +41,7 @@
     $wavs_to_process = array();
     
     
-      $wavs_to_process[] = "test.wav";
+      $wavs_to_process[] = "".$song."";
     
     
     // Could just print to the output buffer, but saving to a variable
