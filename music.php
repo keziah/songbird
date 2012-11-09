@@ -80,7 +80,8 @@
 			array_push($songs, $song);
 			
 			?>
-			<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">
+			<!-- include("wave_form.php"); -->
+			<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">My song</a>
 			<p>
 			<?php
 			

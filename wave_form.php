@@ -41,7 +41,9 @@
     $wavs_to_process = array();
     
     
-      $wavs_to_process[] = "".$song."";
+      $wavs_to_process[] = "uploads/newsong.MOV";
+      
+      //"".$song."";
     
     
     // Could just print to the output buffer, but saving to a variable
