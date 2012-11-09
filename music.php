@@ -103,7 +103,7 @@ include("config.php");
 
 -->
 		
-			<embed autostart="false" src="jetaimeplus.mp3" />
+			<!-- <embed autostart="false" src="jetaimeplus.mp3" /> -->
 
 	<!--	
 	<script type="text/javascript">
@@ -151,9 +151,9 @@ include("config.php");
                         <div id="filedim"></div>
                     </div>
                     <div id="error"></div>
-                    <div id="error2">An error occurred while uploading the file</div>
-                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
-                    <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+                    <div id="error2"></div>
+                    <div id="abort"></div>
+                    <div id="warnsize"></div>
 
                     <div id="progress_info">
                         <div id="progress"></div>

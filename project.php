@@ -23,9 +23,7 @@ include("config.php");
 	<script src="js/script.js"></script>
 </head>	
 <body>
-<?php
 
-?>
 <div data-role="page" id="one">
 
 	<div data-role="header">
@@ -47,26 +45,16 @@ include("config.php");
 	</div>
 		
 		
-		
-		
 	</div><!-- /header -->
 	<?php
 	$project = $_GET['projectname'];
 	?>
-
 	
-	
-
 	<div data-role="content">	
-		<h2><?php echo "$project" ?> <span id="username"></span></h2>
-		
+		<h2><?php echo "$project" ?> <span id="username"></span></h2>	
 		<p>Project Notes:</p>
-		
-		
-		
-			<?php 
-	
-	
+
+	<?php 	
 	$sql="SELECT * FROM projectinfo WHERE projectname = '$project'";
 	$result = mysql_query($sql);
 	$count = mysql_num_rows($result);
@@ -81,13 +69,10 @@ include("config.php");
 	
 		$row = mysql_fetch_assoc($result);
 		echo "".$row["info"]."";
-
 	
 		?>
 
-		<a href="#editform" data-role="button" data-rel="dialog" data-transition="pop">Edit Project Notes</a>
-
-		
+	<a href="#editinfo" data-role="button" data-rel="dialog" data-transition="pop">Edit Project Notes</a>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
@@ -97,8 +82,6 @@ include("config.php");
 				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
 				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
 				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
-
-				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 			</ul>
 		</div>
 	</div>
@@ -108,7 +91,7 @@ include("config.php");
 
 
 
-<div data-role="page" id="editform" class="ui-dialog ui-page ui-body-c" data-url="editform" role="dialog">
+<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editinfo" data-url="editinfo" role="dialog">
 <div data-role="header">
 <h1>Edit Notes</h1>
 </div>
@@ -116,7 +99,7 @@ include("config.php");
 <?php
 $oldInfo =$row['info'];
 ?>
-<form action="editinfo.php" id="editinfo" method="POST" data-ajax="false">
+<form action="editinfo.php" id="edit1" method="POST" data-ajax="false">
 <div data-role="fieldcontain">
 	<textarea cols="40" rows="8" name="newInfo" id="textarea"><?php echo "$oldInfo" ?> </textarea>
 	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/><p>
@@ -126,6 +109,26 @@ $oldInfo =$row['info'];
 
 </div><!-- /content -->
 </div><!-- /page two -->
+
+
+
+<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
+<div data-role="header">
+<h1>Edit Lyrics</h1>
+</div>
+<div data-role="content">
+
+<form action="editlyrics.php" id="edit2" method="POST" data-ajax="false">
+<div data-role="fieldcontain">
+	<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "".$row['lyrics']."" ?> </textarea>
+	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/><p>
+	<input type="submit" value="Submit"/>
+</div>
+</form>
+
+</div><!-- /content -->
+</div><!-- /page three -->
+
 
 
 </body>	
