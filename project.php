@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+<?php session_start();
+?>
+
+=======
 	<?php session_start();
 	?>
+>>>>>>> ee06cdb772bfb0b5529b6dc2c64f3ad23a1bba0d
 <html>
 
 <head>
@@ -19,8 +25,7 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
-
-	
+</head>	
 <body>
 <?php
 
@@ -93,9 +98,15 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
+<<<<<<< HEAD
+				<li><a href="project.php" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
+				<li><a href="music.php" id="music" data-icon="custom">Music</a></li>
+				<li><a href="lyrics.php" id="lyrics" data-icon="custom">Lyrics</a></li>
+=======
 				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
 				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
 				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
+>>>>>>> ee06cdb772bfb0b5529b6dc2c64f3ad23a1bba0d
 				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 			</ul>
 		</div>
@@ -104,6 +115,27 @@
 	
 </div><!-- /page one -->
 
+<<<<<<< HEAD
+<div data-role="page" id="editform" class="ui-dialog ui-page ui-body-c" data-url="signup" role="dialog">
+<div data-role="header">
+<h1>Edit Project Notes</h1>
+</div>
+<div data-role="content">
+<?php
+$oldInfo =$row['info'];
+$_SESSION['activeProj'] = "$project";
+?>
+<form action="editinfo.php" id="editinfo" data-ajax="false">
+<div data-role="fieldcontain">
+	<textarea cols="40" rows="8" name="textarea" id="textarea"><?php echo $oldInfo;?></textarea>
+</div>
+
+<input type="submit" name="submit" value="Submit"/>
+</form>
+
+</div><!-- /content -->
+</div><!-- /page two -->
+=======
 
 <!-- Start of second page: #two -->
 
@@ -137,6 +169,7 @@
 </div>
 </div><!-- /page two -->
 
+>>>>>>> ee06cdb772bfb0b5529b6dc2c64f3ad23a1bba0d
 
 <!-- Start of third page: #popup -->
 <div data-role="page" id="popup">

@@ -23,7 +23,11 @@
   
   
 	include("config.php");
+<<<<<<< HEAD
+	$song = $_GET['songname'];
+=======
 	$song = $_GET['songfilename'];
+>>>>>>> 0486c3959ad716860368c8562ad0b08f151b6532
 
 
     /**

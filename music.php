@@ -89,7 +89,6 @@
 		
 		?>
 		
-		<p>is this updating?</p>
 		<!--
 					<embed autostart="false" src="uploads/<?php echo $filenames[0]; ?>" />
 -->
@@ -120,9 +119,10 @@
 		 <div class="container">
             
             <div class="upload_form_cont">
-                <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php">
+                <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php" data-ajax = "false">
            
-                		<input type="text" name="songfilename" placeholder="Recording Name" maxlength="140"></p>
+                		<input type="text" name="songfilename" placeholder="Song Name" maxlength="140"></p>
+                		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>
                         <div><label for="image_file">Begin recording into the video, then press Upload</label></div>
@@ -132,7 +132,7 @@
                                             </div>
                     
                     <div>
-                        <input class="button green bigrounded" type="button" value="Upload" onclick="startUploading()" />
+                        <input class="button green bigrounded" type="submit" value="Upload" />
                     </div>
                     <div id="fileinfo">
                         <div id="filename"></div>
