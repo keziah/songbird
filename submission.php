@@ -59,7 +59,7 @@ $result2 = mysql_query($query2);
 
 
 
-<form method="get" action="project.php">
+<form method="get" action="project.php" data-ajax="false">
     <input type="hidden" name="projectname" value="<?php echo "".$message."" ?>">
     <input type="submit" value="Go to new project">
 </form>
