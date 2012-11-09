@@ -96,12 +96,6 @@ session_start();
 		<a href="#editform" data-role="button" data-rel="dialog" data-transition="pop">Edit Project Notes</a>
 
 		
-		<a href="#editform" data-role="button" data-rel="dialog" data-transition="pop">
-Edit Project Notes</a>
-
-			
-
-		
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
