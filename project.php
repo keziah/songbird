@@ -119,7 +119,7 @@ $oldInfo =$row['info'];
 <form action="editinfo.php" id="editinfo" method="POST" data-ajax="false">
 <div data-role="fieldcontain">
 	<textarea cols="40" rows="8" name="newInfo" id="textarea"><?php echo "$oldInfo" ?> </textarea>
-	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/>
+	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/><p>
 	<input type="submit" value="Submit"/>
 </div>
 </form>
