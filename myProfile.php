@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 <?php session_start();
 include("config.php");
+=======
+<?php 
+include("config.php");
+session_start();
+>>>>>>> eb0320e7b971c4236eeeef4cd1bb7bfd9a125d13
 ?>
 <html>
 

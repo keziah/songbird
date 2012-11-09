@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php session_start();
 include("config.php");
 ?>
 
+=======
+<?php 
+include("config.php");
+session_start();
+	?>
+>>>>>>> eb0320e7b971c4236eeeef4cd1bb7bfd9a125d13
 <html>
 
 <head>
@@ -85,7 +92,13 @@ include("config.php");
 
 	
 		?>
+<<<<<<< HEAD
 		<a href="#editform" data-role="button" data-rel="dialog" data-transition="pop">Edit Project Notes</a>
+=======
+		
+		<a href="#editform" data-role="button" data-rel="dialog" data-transition="pop">
+Edit Project Notes</a>
+>>>>>>> eb0320e7b971c4236eeeef4cd1bb7bfd9a125d13
 			
 
 		
@@ -124,14 +137,22 @@ $oldInfo =$row['info'];
 	<input type="submit" value="Submit"/>
 </div>
 
+<<<<<<< HEAD
 
 
+=======
+<input type="submit" name="submit" value="Submit"/>
+>>>>>>> eb0320e7b971c4236eeeef4cd1bb7bfd9a125d13
 </form>
 
 </div><!-- /content -->
 </div><!-- /page two -->
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> eb0320e7b971c4236eeeef4cd1bb7bfd9a125d13
 
 
 </body>	
