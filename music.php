@@ -80,7 +80,7 @@
 			array_push($songs, $song);
 			
 			?>
-			<embed autostart="false" src="uploads/<?php echo $song; ?>" />
+			<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">
 			<p>
 			<?php
 			
@@ -90,7 +90,8 @@
 		?>
 		
 		<!--
-					<embed autostart="false" src="uploads/<?php echo $filenames[0]; ?>" />
+								<embed autostart="false" src="uploads/<?php echo $song; ?>" />
+
 -->
 		
 			<embed autostart="false" src="jetaimeplus.mp3" />
