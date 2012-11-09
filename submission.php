@@ -1,4 +1,5 @@
 <?php session_start();
+include("config.php");
 ?>
 <html>
 
@@ -18,7 +19,8 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
-	
+</head>
+<body>
 
 
 <div data-role="header">
@@ -43,21 +45,18 @@
 	</div>
 
 
-
-<body>
 <?php
 $message = $_POST["projectname"];
 $user = $_SESSION['username'];
 
 echo "<p>New project name: ".$message."</p>";
 
-include("config.php");
 $query2 = "insert into projects values ('$user', '$message')";
 $result2 = mysql_query($query2);
 
 ?>
 
-
+<meta http-equiv="REFRESH" content="0; URL=project.php?projectname=<?php echo "".$project."" ?>">
 
 <form method="get" action="project.php" data-ajax="false">
     <input type="hidden" name="projectname" value="<?php echo "".$message."" ?>">
@@ -68,5 +67,4 @@ $result2 = mysql_query($query2);
 
 </body>
 
-</head>
 </html>

@@ -1,5 +1,5 @@
 <?php
-
+include("config.php");
 function bytesToSize1024($bytes, $precision = 2) {
     $unit = array('B','KB','MB');
     return @round($bytes / pow(1024, ($i = floor(log($bytes, 1024)))), $precision).' '.$unit[$i];
@@ -17,9 +17,9 @@ if (move_uploaded_file($_FILES['image_file']['tmp_name'], "uploads/".$songfile."
 	exec($cmd);
 }
 
-$songfilefull = "".$songfilename.".MOV";
+$songfilefull = "".$songfile.".MOV";
 
-include("config.php");
+
 $query2 = "INSERT INTO musicfiles (`projectname`, `filename`) VALUES('$project', '$songfilefull')";
 $result2 = mysql_query($query2);
 

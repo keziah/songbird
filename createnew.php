@@ -1,4 +1,5 @@
 <?php session_start();
+include("config.php");
 ?>
 <html>
 
@@ -44,7 +45,20 @@
 	<div data-role="header">
 	<h1>Create New Project</h1>
 	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home</a>
-	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+
+	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
+    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
+    	<li>Logged in as <?php 
+    		echo($_SESSION['username']);?></li> 
+       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
+       <li><a data-rel="popup" href="createnew.php" data-ajax="false">New Project</a></li>
+        <li><a data-rel="popup" href="#help" data-ajax="false">Help</a></li>
+        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
+         
+    </ul>
+	</div>
+
 
 	</div><!-- /header -->
 

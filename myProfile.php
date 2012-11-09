@@ -1,4 +1,5 @@
 <?php session_start();
+include("config.php");
 ?>
 <html>
 
@@ -18,6 +19,8 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	
+</head>
+<body>
 	<div data-role="header">
 		<h1>Home</h1>
 				<!-- COMMENTED OUT HOME BUTTON
@@ -51,7 +54,8 @@
 <a href="#" data-role="button" class="ui-btn-left" data-iconpos="notext" data-icon="delete" data-rel="back"> </a>
 		<p>This is your home page. From here, you can create a new project or manage the projects you have already created. 		
 		<p>You can always return to this page by clicking HOME on the top left of any other page.
-		</div></div>
+</div>
+
 
 <section id="center">
 
@@ -77,7 +81,6 @@
 
                     <h3>San Francisco, CA</h3>
 
-                 <h4><a href="http://google.com/">http://YOUR-WEBSITE-NAME-HERE.com/</a></h4>
 
 
 <!--Right now the new project button is just linking to project.php. This might need to change later -->
@@ -88,7 +91,6 @@
 <h2>My Projects</h2>
 
 <?php
-	include("config.php");
 	$user = $_SESSION['username'];
 	$sql="SELECT * FROM projects WHERE username = '$user'";
 	$result = mysql_query($sql);
@@ -99,30 +101,26 @@
 			$project = $row["projectname"];
 			?>
 			
-			<a href="project.php?projectname=<?php echo "".$project."" ?>"><?php echo $project ?> </a>
+			
+			<a href="project.php?projectname=<?php echo "".$project."" ?>" data-ajax="false"><?php echo $project ?> </a>
 			<p>
 			<?php
 			
 		}
+	} else {
+		echo "No projects yet.";
 	}
 	
 	?>
 
 
 <a href="project.php">Example Project</a>
-<br>More example projects go here.
-<br>And here.
-<br>And here.
 
-
-                    </ul>
-
-                </div>
-
-            </div>
-
+    </div><!--/data-->
+</div><!--/content-->
+</div><!--/page-->
 	
 	
 	
-</head> 
+</body> 
 </html>
