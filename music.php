@@ -131,7 +131,7 @@ include("config.php");
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php" data-ajax = "false">
            
-                		<input type="text" name="songfilename" placeholder="Song Name" maxlength="140"></p>
+                		<input type="text" name="songfilename" placeholder="Description" maxlength="140"></p>
                 		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>

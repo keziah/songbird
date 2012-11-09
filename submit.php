@@ -15,7 +15,6 @@
 	<link rel="apple-touch-icon" href="appicon.png" />
 	<link rel="apple-touch-startup-image" href="startup.png">
 	
-<<<<<<< HEAD
 	<script src="resources/jquery-1.8.2.min.js"></script>
 	<script src="resources/jquery.mobile-1.2.0.js"></script>
 	<title>Songbird - Contribute</title>
@@ -33,7 +32,6 @@
 </form>
 	
 </head>
-=======
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
@@ -207,7 +205,6 @@
 	});
 	</script>
 </div><!-- /page -->
->>>>>>> a247e6024bd7acf40080fa887294c7dd388692d6
 
 </body>
 </html>

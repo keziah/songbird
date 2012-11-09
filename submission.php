@@ -55,7 +55,7 @@ $result2 = mysql_query($query2);
 
 ?>
 
-<meta http-equiv="REFRESH" content="0; URL=project.php?projectname=<?php echo "".$project."" ?>">
+<meta http-equiv="REFRESH" content="0; URL=project.php?projectname=<?php echo "".$message."" ?>">
 
 <form method="get" action="project.php" data-ajax="false">
     <input type="hidden" name="projectname" value="<?php echo "".$message."" ?>">

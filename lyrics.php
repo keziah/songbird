@@ -49,9 +49,6 @@ include("config.php");
 	
 	<?php
 	$project = $_GET['projectname'];
-	?>
-	
-	<?php 
 	
 	
 	$sql="SELECT * FROM projectinfo WHERE projectname = '$project'";
@@ -61,18 +58,11 @@ include("config.php");
 	
 		$row = mysql_fetch_assoc($result);
 		echo "".$row["lyrics"]."";
-
-	
 	?>	
-	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
-
-		<div data-role="fieldcontain">
-			
-		</div>	
-	
 		
-	<div id="info">
-	</div>	
+	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+		
+	
 	</div><!-- /content -->
 
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
@@ -82,46 +72,23 @@ include("config.php");
 				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" >Info</a></li>
 				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
 				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>
-				
-								<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
 		</ul>
 		</div>
 	</div>
-	
-	<!--<script type="text/javascript">
-	$("#logout").hide();
-	$("#info").hide();
-	var retrievedObject = localStorage.getItem('username');
-	if (retrievedObject == "test") {
-		$("#form").hide();	
-		$("#logout").show();
-		$("#info").show();
-	}
-	$("#logout").click(function() {
-		localStorage.removeItem('username');
-		$("#form").show();
-		$("#logout").hide();
-		$("#info").hide();
-	});
-	</script>
-	-->
 </div><!-- /page -->
 
 
 <div data-role="page" id="editlyrics" class="ui-dialog ui-page ui-body-c" data-url="editlyrics" role="dialog">
 <div data-role="header">
-<h1>Edit Lyrics</h1>
+	<h1>Edit Lyrics</h1>
 </div>
 <div data-role="content">
-<?php
-$oldInfo =$row['info'];
-?>
-<form action="editlyrics.php" id="editinfo" method="POST" data-ajax="false">
-<div data-role="fieldcontain">
-	<textarea cols="40" rows="8" name="newLyrics"><?php echo "".$row["lyrics"]."" ?> </textarea>
-	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/>
-	<input type="submit" value="Submit"/>
-</div>
+	<form action="editlyrics.php" id="editinfo" method="POST" data-ajax="false">
+	<div data-role="fieldcontain">
+		<textarea cols="40" rows="8" name="newLyrics"><?php echo "".$row["lyrics"]."" ?> </textarea>
+		<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/>
+		<input type="submit" value="Submit"/>
+	</div>
 
 
 <input type="submit" name="submit" value="Submit"/>

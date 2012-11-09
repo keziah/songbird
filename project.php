@@ -122,9 +122,6 @@ $oldInfo =$row['info'];
 	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/>
 	<input type="submit" value="Submit"/>
 </div>
-
-
-<input type="submit" name="submit" value="Submit"/>
 </form>
 
 </div><!-- /content -->

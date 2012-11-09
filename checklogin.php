@@ -48,10 +48,10 @@ if($count==1){
 // Register and redirect to file "loggedin.php"
 $_SESSION['username'] = "$username";
 $_SESSION['password'] = "$password";
-	if(isset($_POST['remember'])){
+	/*if(isset($_POST['remember'])){
 	      setcookie("cookname", $_SESSION['username'], time()+60*60*24*100, "/");
 	      setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
-	   }
+	   }*/
 	?>
 	<meta http-equiv="REFRESH" content="0; URL='myProfile.php'">
 
@@ -65,7 +65,7 @@ else {
 </div>
 <div data-role="content">
 Wrong Username or Password.
-<p><a href="index.php" class="ui-link" data-ajax="false">Back</a>
+<p><a href="index.php" class="ui-link" data-role="button" data-ajax="false">Back</a>
 </div>
 </div>
 <?php
