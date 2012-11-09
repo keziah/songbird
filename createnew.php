@@ -32,7 +32,6 @@
 </form>
 	
 </head>
-=======
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
