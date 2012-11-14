@@ -6,5 +6,5 @@ $update = "UPDATE projectinfo SET lyrics='$new' WHERE projectname='$project'";
 mysql_query($update);
 
 ?>
-<meta http-equiv="REFRESH" content="0; URL=project.php?projectname=<?php echo "".$project."" ?>">
+<meta http-equiv="REFRESH" content="0; URL=lyrics.php?projectname=<?php echo "".$project."" ?>">
 
