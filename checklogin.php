@@ -65,7 +65,7 @@ else {
 </div>
 <div data-role="content">
 Wrong Username or Password.
-<p><a href="index.php" class="ui-link" data-role="button" data-ajax="false">Back</a>
+<p><a href="index.php" data-role="button" data-ajax="false" data-rel="back">Back</a>
 </div>
 </div>
 <?php

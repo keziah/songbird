@@ -55,8 +55,10 @@ if (isset($_SESSION['username'])){
 <a href="#signup" class="ui-link" data-rel="dialog" data-transition="pop">
 Create Account</a>
 <p>
-<a href="#reset" class="ui-link" data-rel="dialog" data-transition="pop">
+
+<!--<a href="#reset" class="ui-link" data-rel="dialog" data-transition="pop">
 Forgot Password?</a>
+-->
 
 </div> <!--/content-->
 </div> <!--/first page-->

@@ -108,13 +108,13 @@ include("config.php");
 			
 		}
 	} else {
-		echo "No projects yet.";
+		echo "No projects yet.<p>";
 	}
 	
 	?>
 
 
-<a href="project.php">Example Project</a>
+<a href="project.php?projectname=Tutorial">Example Project</a>
 
     </div><!--/data-->
 </div><!--/content-->
