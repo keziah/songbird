@@ -31,6 +31,7 @@ include("config.php");
 		<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
 		
+		<!--
 		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
 
 	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
@@ -38,12 +39,19 @@ include("config.php");
     	<li>Logged in as <?php 
     		echo($_SESSION['username']);?></li> 
        <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
-       <li><a data-rel="popup" href="createnew.php" data-ajax="false">New Project</a></li>
+    <!--   <li><a data-rel="popup" href="createnew.php" data-ajax="false">New Project</a></li>
        <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
-         
     </ul>
-	</div>
-		
+	</div>-->
+	
+	<a href="#help" data-rel="popup" data-role="button" data-inline="true" data-transition="fade" class="ui-btn-right">Help</a>
+	
+<div data-role="popup" id="help">
+<!--<a href="#" data-role="button" class="ui-btn-left" data-iconpos="notext" data-icon="delete" data-rel="back"> </a>-->
+		<p>This is your project page. From here, you can manage your project's information, music, and lyrics. Just use the tabs at the bottom to navigate!
+		<p> To return home, click the HOME button at the top left corner of the page.
+</div>
+
 		
 	</div><!-- /header -->
 	<?php

@@ -28,10 +28,8 @@ include("config.php");
 		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
         -->
-		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-left">Options</a>
 		
-
-	
 	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
     	<li>Logged in as <?php 
@@ -40,6 +38,17 @@ include("config.php");
       	<li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
     </ul>
 	</div>
+	<!--help div-->
+	
+	<a href="#help" data-rel="popup" data-role="button" data-inline="true" data-transition="fade" class="ui-btn-right">Help</a>
+	
+<div data-role="popup" id="help">
+<!--<a href="#" data-role="button" class="ui-btn-left" data-iconpos="notext" data-icon="delete" data-rel="back"> </a>-->
+		<p>This is your home page. From here, you can create a new project or manage the projects you have already created. 	
+		<p> To create a new project or log out, use the options menu on the top left corner of this page. 	
+		<p>You can always return to this page by clicking HOME on the top left corner of any other page.
+</div>
+	
 	</div><!-- /header -->
 
 
@@ -47,14 +56,9 @@ include("config.php");
 <div id="content" class="clearfix" style="padding:20px">
 <!--help popup code below-->
 <!--help button-->
-<a class="ui-btn-right" style="float:right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"> </a>
+<!--<a class="ui-btn-right" style="float:right" href="#help" data-rel="popup" data-role="button" data-mini="true" data-icon="info" data-iconpos="notext" data-inline="true" data-position-to="window"> </a>-->
 
-<!--help div-->
-<div data-role="popup" id="help">
-<a href="#" data-role="button" class="ui-btn-left" data-iconpos="notext" data-icon="delete" data-rel="back"> </a>
-		<p>This is your home page. From here, you can create a new project or manage the projects you have already created. 		
-		<p>You can always return to this page by clicking HOME on the top left of any other page.
-</div>
+
 
 
 <section id="center">

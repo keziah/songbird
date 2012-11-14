@@ -30,18 +30,14 @@ include("config.php");
 	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
 		
-		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
-			<div data-role="popup" id="popupMenu" data-overlay-theme="c">
-    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
-    	<li>Logged in as <?php 
-    		echo($_SESSION['username']);?></li> 
-       <!-- <li><a data-rel="popup" href="myProfile.php" data-ajax="false">Profile</a></li>-->
-       <li><a data-rel="popup" href="createnew.php" data-ajax="false">New Project</a></li>
-       <li><a data-rel="popup" href="logout.php" data-ajax="false">Logout</a></li>
-         
-    </ul>
-	</div>
-
+			
+	<a href="#help" data-rel="popup" data-role="button" data-inline="true" data-transition="fade" class="ui-btn-right">Help</a>
+	
+<div data-role="popup" id="help">
+		<p>This is your music page. From here, you can manage your project's audio clips. 
+		<p> To add a new music file, click on the CHOOSE FILE button. This will prompt you to take a video. Take a video with the audio you would like to save. Don't forget to add a description to the clip! When you are finished, press UPLOAD. Your audio clip will appear on this page along with your previous uploads.
+		<p> To return home, click the HOME button at the top left corner of the page.
+</div>
 	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
 
 	</div><!-- /header -->

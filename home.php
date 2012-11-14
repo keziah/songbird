@@ -27,7 +27,7 @@ session_start();
 	<!--THIS LOGOUT MUST BE ADDED AND EDITED IN ALL PAGES-->
 	<h1>Home</h1>
 		
-	<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>
+	<!--<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-right">Options</a>-->
 
 <div data-role="popup" id="popupMenu" data-overlay-theme="c">
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
