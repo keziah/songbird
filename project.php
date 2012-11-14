@@ -73,6 +73,7 @@ include("config.php");
 		?>
 
 	<a href="#editinfo" data-role="button" data-rel="dialog" data-transition="pop">Edit Project Notes</a>
+	<a href="#delproj" data-role="button" data-rel="dialog" data-transition="pop">Delete Project</a>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
@@ -129,6 +130,22 @@ $oldInfo =$row['info'];
 </div><!-- /content -->
 </div><!-- /page three -->
 
+
+<div data-role="page" class="ui-dialog ui-page ui-body-c" id="delproj" data-url="delproj" role="dialog">
+<div data-role="header">
+<h1>Delete Project?</h1>
+</div>
+<div data-role="content">
+Are you sure you want to delete "<?php echo "$project"?>"?<p>
+
+<form action="deleteproject.php" method="POST" data-ajax="false">
+	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/><p>
+	<a href="#" data-rel="back" data-role="button" data-inline="true">Cancel</a>
+	<input type="submit" data-role="button" value="Delete" data-inline="true"/>
+</form>
+	
+</div><!-- /content -->
+</div><!-- /page four -->
 
 
 </body>	

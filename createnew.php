@@ -96,7 +96,7 @@ include("config.php");
 
 	
 <!--/end content -->
-   
+  	<!--
 	</div>
 	<script type="text/javascript">
 	$("#logout").hide();
@@ -114,6 +114,7 @@ include("config.php");
 		$("#info").hide();
 	});
 	</script>
+	-->
 </div><!-- /page -->
 
 
