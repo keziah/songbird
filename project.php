@@ -121,22 +121,7 @@ $oldInfo =$row['info'];
 
 
 
-<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
-<div data-role="header">
-<h1>Edit Lyrics</h1>
-</div>
-<div data-role="content">
 
-<form action="editlyrics.php" id="edit2" method="POST" data-ajax="false">
-<div data-role="fieldcontain">
-	<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "".$row['lyrics']."" ?> </textarea>
-	<input type="hidden" name="projectname" value="<?php echo "$project" ?>"/><p>
-	<input type="submit" value="Submit"/>
-</div>
-</form>
-
-</div><!-- /content -->
-</div><!-- /page three -->
 
 
 <div data-role="page" class="ui-dialog ui-page ui-body-c" id="delproj" data-url="delproj" role="dialog">
