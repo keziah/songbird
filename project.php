@@ -119,8 +119,6 @@ $oldInfo =$row['info'];
 </div><!-- /content -->
 </div><!-- /page two -->
 
-
-
 <div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
 <div data-role="header">
 <h1>Edit Lyrics</h1>

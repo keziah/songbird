@@ -171,15 +171,7 @@ include("config.php");
         
 <!-- /End Rio's Audio Code -->
 		
-		
-		
-	
-		
-	<div id="info">
 
-		<!--<embed src="uploads/Starlight.mp3" autostart="false" loop="false">-->
-
-	</div>	
 	</div><!-- /content -->
 
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">

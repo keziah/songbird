@@ -61,9 +61,12 @@ include("config.php");
 	$row = mysql_fetch_assoc($result);
 	echo "<pre>".$row["lyrics"]."</pre>"; //give pre a class or id so you can change font in css
 	?>	
-		
+	
 	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+	
 	</div><!-- /content -->
+
+
 
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">

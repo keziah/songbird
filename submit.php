@@ -55,9 +55,7 @@
 		</div>	
 	
 		
-	<div id="info">
-		
-	</div>	
+
 	</div><!-- /content -->
 	
 <div id="form">
@@ -188,23 +186,7 @@
 		</ul>
 		</div>
 	</div>
-	<script type="text/javascript">
-	$("#logout").hide();
-	$("#info").hide();
-	var retrievedObject = localStorage.getItem('username');
-	if (retrievedObject == "test") {
-		$("#form").hide();	
-		$("#logout").show();
-		$("#info").show();
-	}
-	$("#logout").click(function() {
-		localStorage.removeItem('username');
-		$("#form").show();
-		$("#logout").hide();
-		$("#info").hide();
-	});
-	</script>
-</div><!-- /page -->
+	</div><!-- /page -->
 
 </body>
 </html>
