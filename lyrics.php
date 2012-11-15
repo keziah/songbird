@@ -62,6 +62,8 @@ include("config.php");
 	echo "<pre>".$row["lyrics"]."</pre>"; //give pre a class or id so you can change font in css
 	?>	
 	
+		<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+	
 	</div><!-- /content -->
 
 

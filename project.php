@@ -120,7 +120,7 @@ $oldInfo =$row['info'];
 </div><!-- /page two -->
 
 
-	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+
 	
 	<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
 <div data-role="header">
