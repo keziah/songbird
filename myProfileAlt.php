@@ -24,11 +24,7 @@ include("config.php");
 <body>
 	<div data-role="header">
 		<h1>Home</h1>
-				<!-- COMMENTED OUT HOME BUTTON
-		<a data-role="button" href="home.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
-        </a>
-        -->
-		<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-left">Options</a>
+				<a href="#popupMenu" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right" data-inline="true" data-transition="fade" class="ui-btn-left">Options</a>
 		
 	<div data-role="popup" id="popupMenu" data-overlay-theme="c">
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="c">
@@ -103,7 +99,7 @@ include("config.php");
 			?>
 			
 			
-			<a href="project.php?projectname=<?php echo "".$project."" ?>" data-ajax="false"><?php echo $project ?> </a>
+			<a href="music2.php?projectname=<?php echo "".$project."" ?>" data-ajax="false"><?php echo $project ?> </a>
 			<p>
 			<?php
 			

@@ -1,6 +1,11 @@
 <?php session_start();
 include("config.php");
 ?>
+
+<?php
+
+	$project = $_GET['projectname'];
+	?>
 <html>
 
 <head>
@@ -26,7 +31,10 @@ include("config.php");
 <div data-role="page">
 
 	<div data-role="header">
-	<h1>Music</h1>
+	<h1><?php
+	echo $project;
+	?>
+	</h1>
 	<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
 		
@@ -53,13 +61,13 @@ include("config.php");
 	</audio>
 	
 	-->
-	
+	<!--
 	<?php
 
 	$project = $_GET['projectname'];
-	?>
+	?> -->
 	
-	<p>Music Files:</p>
+	<h3>Music Files</h3>
 	
 				<?php 
 	
@@ -88,7 +96,10 @@ include("config.php");
 			<?php
 			
 		}
+	} else {
+		echo "No music files yet.<p>";
 	}
+
 		
 		?>
 		
@@ -121,13 +132,15 @@ include("config.php");
 		</div>	
 		-->
 		
+		
+		<h3>Upload</h3>
 <!-- Begin Rio's Audio Code -->
 		 <div class="container">
             
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php" data-ajax = "false">
            
-                		<input type="text" name="songfilename" placeholder="Description" maxlength="140"></p>
+                		<input type="text" name="songfilename" placeholder="Song File Name (exclude extension)" maxlength="140"></p>
                 		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>
@@ -183,11 +196,10 @@ include("config.php");
 	</div><!-- /content -->
 
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+		<div data-role="navbar" class="nav-glyphish-example">
 		<ul>
-				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" >Info</a></li>
-				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
-				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="music2.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
+				<li><a href="lyrics2.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
 
 				
 				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->
