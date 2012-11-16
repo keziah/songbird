@@ -4,6 +4,7 @@ include("config.php");
 <html>
 
 <head>
+<script src="//cdn.optimizely.com/js/141856090.js"></script>
 	<title>Songbird</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,7 +60,7 @@ include("config.php");
 	$project = $_GET['projectname'];
 	?>
 	
-	<p>Music Files:</p>
+	<h3>Music Files</h3>
 	
 				<?php 
 	
@@ -74,10 +75,10 @@ include("config.php");
 		while ($row = mysql_fetch_assoc($result)) {
 			$song = $row["filename"];
 			array_push($songs, $song);
-			
+			echo $song;
 			?>
 			<!-- include("wave_form.php"); -->
-			
+			<p>
 			<video width="320" height="240" controls="controls">
   				<source src="uploads/<?php echo $song; ?>" type="video/mp4">
   				<source src="movie.ogg" type="video/ogg">
@@ -127,11 +128,11 @@ include("config.php");
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="uploadAudio.php" data-ajax = "false">
            
-                		<input type="text" name="songfilename" placeholder="Description" maxlength="140"></p>
+                		<input type="text" name="songfilename" placeholder="Name your file" maxlength="140"></p>
                 		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>
-                        <div><label for="image_file">Upload a prerecorded video file or record your music file:</label></div>
+                        <div><label for="image_file">Press the choose file button for the options of recording a video or uploading a precorded music file</label></div>
                         <div><input type="file" accept="video/*" name="image_file" id="image_file" onchange="fileSelected();" /></div>
                        
 

@@ -5,7 +5,7 @@ include("config.php");
 <html>
 
 <head>
-
+<script src="//cdn.optimizely.com/js/141856090.js"></script>
 	<title>Songbird</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,7 +17,7 @@ include("config.php");
 	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="appicon.png" />
 	<link rel="apple-touch-startup-image" href="startup.png">
-	
+
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 	<script src="js/script.js"></script>
@@ -118,6 +118,7 @@ $oldInfo =$row['info'];
 
 </div><!-- /content -->
 </div><!-- /page two -->
+
 
 <div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
 <div data-role="header">

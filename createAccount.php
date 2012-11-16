@@ -38,6 +38,13 @@ if($newPass != $confirmPass){
 	//want to make it pause somehow before redirect
 	//echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";
 	echo ('<p><a href="index.php#signup" data-role="button" data-rel="back">Back</a></div><!--/content-->');
+} else if ($newPass == "") {
+	echo "Enter a password with at least one character.";
+//want to make it pause somehow before redirect
+	//echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";
+	echo ('<p><a href="index.php#signup" data-role="button" data-rel="back">Back</a></div><!--/content-->');
+
+
 } else {
 
 $sql="SELECT * FROM $tbl_name WHERE username = '$newUser'";
