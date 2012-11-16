@@ -93,12 +93,6 @@ include("config.php");
 		
 		?>
 		
-		<!--
-								<embed autostart="false" src="uploads/<?php echo $song; ?>" />
-											<a href="wave_form.php?songfilename=<?php echo "".$song."" ?>">My song</a>
-
-
--->
 		
 			<!-- <embed autostart="false" src="jetaimeplus.mp3" /> -->
 
@@ -132,7 +126,11 @@ include("config.php");
                 		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>
+<<<<<<< HEAD
                         <div><label for="image_file">Press the choose file button for the options of recording a video or uploading a precorded music file</label></div>
+=======
+                        <div><label for="image_file">Clicking "Choose File" below will let you choose to upload a prerecorded video file or record a new file:</label></div>
+>>>>>>> 9f527f3dc57677333e6042b01ff252b5da3d314e
                         <div><input type="file" accept="video/*" name="image_file" id="image_file" onchange="fileSelected();" /></div>
                        
 
