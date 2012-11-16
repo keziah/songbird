@@ -88,9 +88,9 @@ include("config.php");
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
 
-				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" class="ui-btn-active">Info</a></li>
-				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
-				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" class="ui-btn-active" data-ajax="false">Info</a></li>
+				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" data-ajax="false">Music</a></li>
+				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom" data-ajax="false">Lyrics</a></li>
 			</ul>
 		</div>
 	</div>
@@ -100,7 +100,8 @@ include("config.php");
 
 
 
-<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editinfo" data-url="editinfo" role="dialog">
+<div data-role="dialog" class="ui-dialog ui-page ui-body-c" id="editinfo" data-url="editinfo">
+<div role="dialog">
 <div data-role="header">
 <h1>Edit Notes</h1>
 </div>
@@ -117,10 +118,12 @@ $oldInfo =$row['info'];
 </form>
 
 </div><!-- /content -->
+</div>
 </div><!-- /page two -->
 
 
-<div data-role="page" class="ui-dialog ui-page ui-body-c" id="editlyrics" data-url="editlyrics" role="dialog">
+<div data-role="dialog" class="ui-dialog ui-page ui-body-c" data-url="editlyrics">
+<div role="dialog">
 <div data-role="header">
 <h1>Edit Lyrics</h1>
 </div>
@@ -135,10 +138,12 @@ $oldInfo =$row['info'];
 </form>
 
 </div><!-- /content -->
+</div>
 </div><!-- /page three -->
 
 
-<div data-role="page" class="ui-dialog ui-page ui-body-c" id="delproj" data-url="delproj" role="dialog">
+<div data-role="dialog" class="ui-dialog ui-page ui-body-c" id="delproj" data-url="delproj">
+<div role="dialog">
 <div data-role="header">
 <h1>Delete Project?</h1>
 </div>
@@ -152,6 +157,7 @@ Are you sure you want to delete "<?php echo "$project"?>"?<p>
 </form>
 	
 </div><!-- /content -->
+</div>
 </div><!-- /page four -->
 
 

@@ -170,9 +170,9 @@ include("config.php");
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" >Info</a></li>
-				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" class="ui-btn-active">Music</a></li>
-				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom">Lyrics</a></li>
+				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" data-ajax="false">Info</a></li>
+				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" class="ui-btn-active" data-ajax="false">Music</a></li>
+				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom" data-ajax="false">Lyrics</a></li>
 
 				
 				<!--<li><a href="submit.php" id="submit" data-icon="custom">Submit</a></li>-->

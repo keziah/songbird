@@ -30,11 +30,6 @@ include("config.php");
 		<h1>Lyrics</h1>
 		<a data-role="button" href="myProfile.php" data-icon="home" data-iconpos="left" class="ui-btn-left" data-ajax="false">Home
         </a>
-		
-
-
-		
-
 	
 	<a href="#help" data-rel="popup" data-role="button" data-inline="true" data-transition="fade" class="ui-btn-right">Help</a>
 	
@@ -47,11 +42,12 @@ include("config.php");
 				
 	</div><!-- /header -->
 
+
+	
+	<div data-role="content">
 	<?php
 	$project = $_GET['projectname'];
 	?>
-	
-	<div data-role="content">
 	<?php
 	$sql="SELECT * FROM projectinfo WHERE projectname = '$project'";
 	$result = mysql_query($sql);
@@ -62,7 +58,7 @@ include("config.php");
 	echo "<pre>".$row["lyrics"]."</pre>"; //give pre a class or id so you can change font in css
 	?>	
 	
-	<a href="lyriceditor.php?lyrics=<?php echo "".$row['lyrics'].""?>" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+	<a href="lyrics.php?projectname=<?php echo "$project"?>#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
 	
 	</div><!-- /content -->
 
@@ -73,9 +69,9 @@ include("config.php");
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
 
-				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom">Info</a></li>
-				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom">Music</a></li>
-				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom" class="ui-btn-active">Lyrics</a></li>
+				<li><a href="project.php?projectname=<?php echo "".$project."" ?>" id="info" data-icon="custom" data-ajax="false">Info</a></li>
+				<li><a href="music.php?projectname=<?php echo "".$project."" ?>" id="music" data-icon="custom" data-ajax="false">Music</a></li>
+				<li><a href="lyrics.php?projectname=<?php echo "".$project."" ?>" id="lyrics" data-icon="custom" class="ui-btn-active" data-ajax="false">Lyrics</a></li>
 			</ul>
 		</div>
 	</div>
@@ -89,9 +85,9 @@ include("config.php");
 	</div>
 	<div data-role="content">
 	
-	<form action="editlyrics.php" id="edit2" method="POST" data-ajax="false">
+	<form action="editlyrics.php" method="POST" data-ajax="false">
 	<div data-role="fieldcontain">
-		<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "$old" ?> </textarea>
+		<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "".$row['lyrics']."" ?> </textarea>
 		<input type="hidden" name="projectname" value="test"/><p>
 		<input type="submit" value="Submit"/>
 	</div>
