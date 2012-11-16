@@ -1,6 +1,5 @@
 <?php session_start();
 include("config.php");
-
 ?>
 
 <html>
@@ -63,7 +62,7 @@ include("config.php");
 	echo "<pre>".$row["lyrics"]."</pre>"; //give pre a class or id so you can change font in css
 	?>	
 	
-	<a href="#editlyrics" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
+	<a href="lyriceditor.php?lyrics=<?php echo "".$row['lyrics'].""?>" data-role="button" data-rel="dialog" data-transition="pop">Edit Lyrics</a>
 	
 	</div><!-- /content -->
 
@@ -83,22 +82,24 @@ include("config.php");
 
 </div><!-- /page -->
 
-<div class="ui-dialog ui-page ui-body-c" id="editlyrics" data-role="dialog">
-<div data-role="header">
-<h1>Edit Lyrics</h1>
+<div data-role="dialog" class="ui-dialog ui-page ui-body-c" id="editlyrics"  data-url="lyriceditor.php" data-external-page="true">
+<div role="dialog">
+	<div data-role="header">
+	<h1>Edit Lyrics</h1>
+	</div>
+	<div data-role="content">
+	
+	<form action="editlyrics.php" id="edit2" method="POST" data-ajax="false">
+	<div data-role="fieldcontain">
+		<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "$old" ?> </textarea>
+		<input type="hidden" name="projectname" value="test"/><p>
+		<input type="submit" value="Submit"/>
+	</div>
+	</form>
+	
+	</div><!-- /content -->
 </div>
-<div data-role="content">
-
-<form action="editlyrics.php" id="edit2" method="POST" data-ajax="false">
-<div data-role="fieldcontain">
-	<textarea cols="40" rows="8" name="lyrics" id="lyrics"><?php echo "".$row['lyrics']."" ?> </textarea>
-	<input type="hidden" name="projectname" value="test"/><p>
-	<input type="submit" value="Submit"/>
 </div>
-</form>
-
-</div><!-- /content -->
-</div><!-- /page three -->
 
 </body>
 </html>

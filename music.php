@@ -39,7 +39,7 @@ include("config.php");
 		<p> To add a new music file, click on the CHOOSE FILE button. This will prompt you to take a video. Take a video with the audio you would like to save. Don't forget to add a description to the clip! When you are finished, press UPLOAD. Your audio clip will appear on this page along with your previous uploads.
 		<p> To return home, click the HOME button at the top left corner of the page.
 </div>
-	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+
 
 	</div><!-- /header -->
 
@@ -126,15 +126,9 @@ include("config.php");
                 		<input type="hidden" name="projectname" value="<?php echo "".$project."" ?>">
 
                     <div>
-<<<<<<< HEAD
-                        <div><label for="image_file">Press the choose file button for the options of recording a video or uploading a precorded music file</label></div>
-=======
-                        <div><label for="image_file">Clicking "Choose File" below will let you choose to upload a prerecorded video file or record a new file:</label></div>
->>>>>>> 9f527f3dc57677333e6042b01ff252b5da3d314e
+                    <div><label for="image_file">Clicking "Choose File" below will let you choose to upload a prerecorded video file or record a new file:</label></div>
                         <div><input type="file" accept="video/*" name="image_file" id="image_file" onchange="fileSelected();" /></div>
-                       
-
-                                            </div>
+                    </div>
                     
                     <div>
                         <input class="button green bigrounded" type="submit" value="Upload" />
@@ -185,22 +179,6 @@ include("config.php");
 		</ul>
 		</div>
 	</div>
-	<script type="text/javascript">
-	$("#logout").hide();
-	$("#info").hide();
-	var retrievedObject = localStorage.getItem('username');
-	if (retrievedObject == "test") {
-		$("#form").hide();	
-		$("#logout").show();
-		$("#info").show();
-	}
-	$("#logout").click(function() {
-		localStorage.removeItem('username');
-		$("#form").show();
-		$("#logout").hide();
-		$("#info").hide();
-	});
-	</script>
 </div><!-- /page -->
 
 </body>
